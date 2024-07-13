@@ -1,0 +1,6 @@
+contract Math {
+    function uint128 addUint128(uint128 amount0, uint128 amount1) export
+    {
+        return  amount0 + amount1;
+    }
+}

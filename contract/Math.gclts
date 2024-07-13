@@ -1,0 +1,12 @@
+random.reseed
+allocate.address 1024
+chain.gaslimit 256
+
+chain.deploy @1 Math.gcl
+
+txn1[] = Math.addUint128 {amount0: 1, amount1: 2}
+chain.run
+
+chain.info
+
+viz.profiling

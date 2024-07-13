@@ -1,0 +1,165 @@
+replacements:
+  # i128/256/512 ==
+  GCLLongInt_Compare_128: i128.eq
+  GCLLongInt_Compare_256: i256.eq
+  GCLLongInt_Compare_512: i512.eq
+  GCLULongInt_Compare_128: i128.eq
+  GCLULongInt_Compare_256: i256.eq
+  GCLULongInt_Compare_512: i512.eq
+  GCLLongInt_IsSign_128: "i128.const 0 \n i128.lt"
+  GCLLongInt_IsSign_256: "i256.const 0 \n i256.lt"
+  GCLLongInt_IsSign_512: "i512.const 0 \n i512.lt"
+  GCLLongInt_IsZero_128: "i128.const 0 \n i128.eq"
+  GCLLongInt_IsZero_256: "i256.const 0 \n i256.eq"
+  GCLLongInt_IsZero_512: "i512.const 0 \n i512.eq"
+  GCLULongInt_IsZero_128: "i128.const 0 \n i128.eq"
+  GCLULongInt_IsZero_256: "i256.const 0 \n i256.eq"
+  GCLULongInt_IsZero_512: "i512.const 0 \n i512.eq"
+  # i128/256/512 assign operator =
+  GCLLongInt_ConvertFromHexString_128: todo
+  GCLLongInt_ConvertFromString_128: todo
+  GCLULongInt_ConvertFromHexString_128: todo
+  GCLULongInt_ConvertFromString_128: todo
+  GCLLongInt_ConvertFromHexString_256: todo
+  GCLLongInt_ConvertFromString_256: todo
+  GCLULongInt_ConvertFromHexString_256: todo
+  GCLULongInt_ConvertFromString_256: todo
+  GCLLongInt_ConvertFromHexString_512: todo
+  GCLLongInt_ConvertFromString_512: todo
+  GCLULongInt_ConvertFromHexString_512: todo
+  GCLULongInt_ConvertFromString_512: todo
+  # i128/256/512 +
+  GCLLongInt_Add_128: i128.add
+  GCLLongInt_Add_256: i256.add
+  GCLLongInt_Add_512: i512.add
+  GCLULongInt_Add_128: i128.add
+  GCLULongInt_Add_256: i256.add
+  GCLULongInt_Add_512: i512.add
+  # i128/256/512 -
+  GCLLongInt_Sub_128: i128.sub
+  GCLLongInt_Sub_256: i256.sub
+  GCLLongInt_Sub_512: i512.sub
+  GCLULongInt_Sub_128: i128.sub
+  GCLULongInt_Sub_256: i256.sub
+  GCLULongInt_Sub_512: i512.sub
+  # i128/256/512 *
+  GCLLongInt_Mul_128: i128.mul
+  GCLLongInt_Mul_256: i256.mul
+  GCLLongInt_Mul_512: i512.mul
+  GCLULongInt_Mul_128: i128.mul
+  GCLULongInt_Mul_256: i256.mul
+  GCLULongInt_Mul_512: i512.mul
+  # i128/256/512 /
+  GCLLongInt_Div_128: i128.div_s
+  GCLLongInt_Div_256: i256.div_s
+  GCLLongInt_Div_512: i512.div_s
+  GCLULongInt_Div_128: i128.div_u
+  GCLULongInt_Div_256: i256.div_u
+  GCLULongInt_Div_512: i512.div_u
+  # i128/256/512 %
+  GCLLongInt_Mod_128: i128.rem_s
+  GCLLongInt_Mod_256: i256.rem_s
+  GCLLongInt_Mod_512: i512.rem_s
+  GCLULongInt_Mod_128: i128.rem_u
+  GCLULongInt_Mod_256: i256.rem_u
+  GCLULongInt_Mod_512: i512.rem_u
+  # i128/256/512 -
+  GCLLongInt_Negate_128: i128.neg
+  GCLLongInt_Negate_256: i256.neg
+  GCLLongInt_Negate_512: i512.neg
+  # i128/256/512 <<
+  GCLULongInt_leftShift_128: i128.shl
+  GCLULongInt_leftShift_256: i256.shl
+  GCLULongInt_leftShift_512: i512.shl
+  # i128/256/512 >>
+  GCLULongInt_rightShift_128: i128.shr
+  GCLULongInt_rightShift_256: i256.shr
+  GCLULongInt_rightShift_512: i512.shr
+  # i128/256/512 >>
+  GCLBigintAssign: bigint.assign
+  GCLBigintCompare: bigint.eq
+  GCLBigintAdd: bigint.add
+  GCLBigintSub: bigint.sub
+  GCLBigintMul: bigint.mul
+  GCLBigintDiv: bigint.div
+  GCLBigintNegate: bigint.neg
+  GCLBigintMod: bigint.mod
+  # bigint Composite functions
+  GCLCreateBigint: todo
+  GCLBigintAssignInt64: todo
+  GCLBigintAssignString: todo
+  GCLBigintEmbed: todo
+  GCLBigintGetEmbeddedSize: todo
+  GCLBigintInitFromEmbedded: todo
+  GCLBigintIsEmbeddable: todo
+  GCLReleaseBigint: todo
+  GCLBigintAddInplace: todo
+  GCLBigintSubInplace: todo
+  #  f256/512/1024 ==
+  GCLFloat_Compare_256: f256.eq
+  GCLFloat_Compare_512: f512.eq
+  GCLFloat_Compare_1024: f1024.eq
+  #  f256/512/1024 +
+  GCLFloat_Add_256: f256.add
+  GCLFloat_Add_512: f512.add
+  GCLFloat_Add_1024: f1024.add
+  #  f256/512/1024 -
+  GCLFloat_Sub_256: f256.sub
+  GCLFloat_Sub_512: f512.sub
+  GCLFloat_Sub_1024: f1024.sub
+  #  f256/512/1024 *
+  GCLFloat_Mul_256: f256.mul
+  GCLFloat_Mul_512: f512.mul
+  GCLFloat_Mul_1024: f1024.mul
+  #  f256/512/1024 /
+  GCLFloat_Div_256: f256.div
+  GCLFloat_Div_512: f512.div
+  GCLFloat_Div_1024: f1024.div
+  #  f256/512/1024 -
+  GCLFloat_Negate_256: f256.neg
+  GCLFloat_Negate_512: f512.neg
+  GCLFloat_Negate_1024: f1024.neg
+  GCLFloat_IsZero_256: "f256.const 0 \n f256.eq"
+  GCLFloat_IsZero_512: "f512.const 0 \n f512.eq"
+  GCLFloat_IsZero_1024: "f1024.const 0 \n f1024.eq"
+  GCLFloat_Zero_256: "f256.const 0 \n f256.eq"
+  GCLFloat_Zero_512: "f512.const 0 \n f512.eq"
+  GCLFloat_Zero_1024: "f1024.const 0 \n f1024.eq"
+  # contract functions
+  GCLBurnGasLoop: todo
+  GCLEvent_Exception: todo
+  GCLReportReturnValue: "drop \n drop \n drop"
+  GCLEmitRelayToScope: todo
+  GCLDebugAssertionFailure: todo
+  GCLDebugPrintBufferAppendSerializedData: todo
+  GCLDebugPrintOutputBuffer: todo
+  GCLEmitRelayToGlobal: todo
+  GCLEmitRelayToShards: todo
+  GCLBlock_GetShardOrder: todo
+  GCLBlock_GetHeight: todo
+  GCLTransaction_GetSelfAddress: todo
+  GCLTransaction_GetInitiatorAddress: todo
+  GCLTransaction_GetTimestamp: todo
+  GCLTransaction_GetNonce: todo
+  GCLTransaction_GetValue: todo
+  GCLTransaction_GetGasLimit: todo
+  GCLTransaction_GetGasPrice: todo
+  GCLTransaction_GetData: todo
+  GCLTransaction_GetShardID: todo
+  GCLTransaction_GetType: todo
+  GCLTransaction_GetSuppliedTokensCount: todo
+  GCLTransaction_GetSuppliedToken: todo
+  GCLReportOrphanToken: todo
+  GCLULongInt_toInt64_512: todo
+  GCLULongInt_toInt64_128: todo
+  GCLULongInt_toInt64_256: todo
+
+excludes:
+  - GCLReportReturnValue
+  - GCLEvent_Exception
+  - GCLBigintGetEmbeddedSize
+  - GCLCreateBigint
+  - GCLReleaseBigint
+  - GCLTransaction_GetSuppliedTokensCount
+  - GCLReportOrphanToken
+  - GCLTransaction_GetSuppliedToken
