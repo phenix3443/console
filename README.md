@@ -50,7 +50,7 @@ gcc -o work-with-gcl-i128add work-with-gcl-i128add.c -I../../include -L../../lib
 
 ## install gcc on windows
 
-1. 安装 2, [下载链接](https://github.com/msys2/msys2-installer/releases/download/2024-05-07/msys2-x86_64-20240507.exe)
+1. 安装 msys2, [下载链接](https://github.com/msys2/msys2-installer/releases/download/2024-05-07/msys2-x86_64-20240507.exe)
 
 2. 使用 Pacman（MSYS2 的包管理器）安装 GCC，在 MSYS2 终端中，运行以下命令安装 GCC 工具链：
 
