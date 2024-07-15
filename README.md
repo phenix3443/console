@@ -15,7 +15,7 @@ cd C:\Users\IDEA\AppData\Local\GCL\GCL_Dev_Environment\bin
 
 ## 转译 WASM 代码
 
-1. 将 wasm 二进制文件解析为可读的 wat 格式文件：
+1. 通过 [wabt 工具](https://github.com/WebAssembly/wabt) 将 wasm 二进制文件解析为可读的 wat 格式文件：
 
 ```sh
 .\wabt-1.0.35\bin\wasm2c.exe C:\Users\IDEA\AppData\Roaming\.gcl\chsimu_repo\wasm\bin\1_0000001400100001_Math.wasm -o contract\1_0000001400100001_Math.wat --generate-names --enable-function-references
