@@ -40,11 +40,15 @@ transpiler\transpiler.exe --config transpiler\config.yaml --input contract\1_000
 4. 编译运行脚本
 
 ```sh
-cd runtime\examples\work-with-gcl-i128add\
-gcc -o work-with-gcl-i128add work-with-gcl-i128add.c -I../../include -L../../lib -lwasm-sc-runtime -Wl,-rpath,../../lib
+cd runtime\examples\work-with-gcl\Math
+gcc -o work-with-gcl-Math work-with-gcl-Math.c -I../../../include -L../../../lib -lwasm-sc-runtime
 ```
 
 5. 执行编译后的程序
+
+```sh
+work-with-gcl-Math.exe ..\..\..\..\contract\Math.wat
+```
 
 ![alt text](runtime.png)
 
