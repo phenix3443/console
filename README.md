@@ -24,7 +24,7 @@ cd C:\Users\IDEA\AppData\Local\GCL\GCL_Dev_Environment\bin
 2. 转译器将 wat 文件中的 GCL 函数调用转译为课题二的 wasm 专用指令。注意转译器程序依赖 vs 运行时，[下载链接](https://download.visualstudio.microsoft.com/download/pr/30682086-8872-4c7d-b066-0446b278141b/6c2a4176652e213613187c22e92d15d6e37347f8cfa51b5e5da1ad4871155635/vs_Community.exe)
 
 ```sh
-transpiler\transpiler.exe --config transpiler\config.yaml --input contract\1_0000001400100001_Math.wat --output contract\Math.wat
+.\transpiler\transpiler.exe --config transpiler\config.yaml --input contract\1_0000001400100001_Math.wat --output contract\Math.wat
 ```
 
 ## 运行时执行
@@ -35,19 +35,10 @@ transpiler\transpiler.exe --config transpiler\config.yaml --input contract\1_000
 
 2. 将 `runtime\lib` 添加系统环境变量，注意可能需要重启系统。
 
-3. 打开命令提示窗口。
-
-4. 编译运行脚本
+3. 打开命令提示窗口，运行程序加载 wat 文件执行：
 
 ```sh
-cd runtime\examples\work-with-gcl\Math
-gcc -o work-with-gcl-Math work-with-gcl-Math.c -I../../../include -L../../../lib -lwasm-sc-runtime
-```
-
-5. 执行编译后的程序
-
-```sh
-work-with-gcl-Math.exe ..\..\..\..\contract\Math.wat
+.\runtime\work-with-gcl-Math.exe contract\Math.wat
 ```
 
 ![alt text](runtime.png)

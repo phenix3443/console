@@ -1,0 +1,5 @@
+﻿Physical CPU core: 4, Logic CPU core: 8
+[GCL]: Chain initialized with 4 shard(s), in sync-sharding mode
+[GCL]: 1024 addresses added and evenly distributed in shards
+[GCL]: Compiling 1 contract(s), target=GCL_WASM
+[GCL]: Linking 1 contract(s), target=GCL_WASM

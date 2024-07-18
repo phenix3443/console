@@ -4,9 +4,8 @@ chain.gaslimit 256
 
 chain.deploy @1 Math.gcl
 
-txn1[] = Math.addUint128 {amount0: 1, amount1: 2}
+txn1[] = Math.addUint128 @0 {amount0: 1, amount1: 2}
+txn2[] = Math.getState @0 {}
 chain.run
-
-chain.info
 
 viz.profiling
