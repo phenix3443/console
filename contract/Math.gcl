@@ -1,6 +1,24 @@
 contract Math {
-    function uint128 addUint128(uint128 amount0, uint128 amount1) export
+    @address uint128 state;
+    
+    @address function addUint128(uint128 amount0, uint128 amount1) export
     {
-        return  amount0 + amount1;
+        state = amount0 + amount1;
+    }
+    @address function subUint128(uint128 amount0, uint128 amount1) export
+    {
+        state = amount0 - amount1;
+    }
+    @address function mulUint128(uint128 amount0, uint128 amount1) export
+    {
+        state = amount0 * amount1;
+    }
+    @address function divUint128(uint128 amount0, uint128 amount1) export
+    {
+        state = amount0 / amount1;
+    }
+    @address function uint128 getState() export
+    {
+        return state;
     }
 }
