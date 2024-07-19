@@ -31,44 +31,12 @@ cd C:\Users\IDEA\AppData\Local\GCL\GCL_Dev_Environment\bin
 
 专用指令运行时加载 wat 文件执行
 
-1. 安装 gcc
+1. 将 `runtime\lib` 添加系统环境变量 path，注意可能需要重启系统。
 
-2. 将 `runtime\lib` 添加系统环境变量，注意可能需要重启系统。
-
-3. 打开命令提示窗口，运行程序加载 wat 文件执行：
+2. 打开命令提示窗口，运行程序加载 wat 文件执行：
 
 ```sh
 .\runtime\work-with-gcl-Math.exe contract\Math.wat
 ```
 
 ![alt text](runtime.png)
-
-## install gcc on windows
-
-1. 安装 msys2, [下载链接](https://github.com/msys2/msys2-installer/releases/download/2024-05-07/msys2-x86_64-20240507.exe)
-
-2. 使用 Pacman（MSYS2 的包管理器）安装 GCC，在 MSYS2 终端中，运行以下命令安装 GCC 工具链：
-
-```sh
-pacman -Syu
-pacman -S mingw-w64-x86_64-toolchain
-
-```
-
-3. 将 GCC 添加到系统 PATH
-
-要在任意命令提示符或 PowerShell 中使用 GCC，需要将 GCC 二进制文件的路径添加到系统 PATH 中。
-
-对于 64 位系统，路径通常是 C:\msys64\mingw64\bin。
-你可以通过进入“系统属性” -> “高级” -> “环境变量”，编辑 PATH 变量来添加此路径。
-注意更改系统环境变量后可能需要重启系统才能生效。
-
-4. 验证安装
-
-打开新的命令提示符或 PowerShell 窗口，并输入以下命令：
-
-```sh
-gcc --version
-```
-
-这将显示 GCC 的版本信息，确认 GCC 已安装并可用。
