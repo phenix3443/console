@@ -1,0 +1,5 @@
+{
+  "Math.gclts": "-count:4  -WASM",
+  "Token.gclts": "-count:4 -WASM",
+  "RelayToken.gclts": "-count:4 -WASM"
+}

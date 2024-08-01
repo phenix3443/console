@@ -1,5 +1,5 @@
-namespace NS_chsimu_Token_6 {
-struct __prlt_Token {
+namespace NS_chsimu_RelayToken_6 {
+struct __prlt_RelayToken {
     uint64_t contract_id = 0;
     prlrt::__prlt___block __prli___block;
     prlrt::__prlt___transaction __prli___transaction;
@@ -31,9 +31,9 @@ struct __prlt_Token {
 };
 
 extern "C" {
-    API_EXPORT uint32_t Contract_chsimu_Token_6_TransactionCallEntry(void *pContractInstance, uint32_t functionId, uint8_t *args, uint32_t args_size) {
+    API_EXPORT uint32_t Contract_chsimu_RelayToken_6_TransactionCallEntry(void *pContractInstance, uint32_t functionId, uint8_t *args, uint32_t args_size) {
         try {
-            if (pContractInstance) ((__prlt_Token *)pContractInstance)->__prli___transaction.import_supplied_tokens();
+            if (pContractInstance) ((__prlt_RelayToken *)pContractInstance)->__prli___transaction.import_supplied_tokens();
             switch (functionId){
             case 0:
             {
@@ -42,7 +42,7 @@ extern "C" {
                 __prlt_bigint arg1;
                 if (!arg1.map_from_serialized_data(args, args_size, true)) return uint32_t(prlrt::ExecutionError::ArgumentDeserializationFailure);
                 if (args_size != 0) return uint32_t(prlrt::ExecutionError::ArgumentDeserializationFailure);
-                __prlt_bool ret = ((__prlt_Token *)pContractInstance)->__prli_transfer(arg0, arg1);
+                __prlt_bool ret = ((__prlt_RelayToken *)pContractInstance)->__prli_transfer(arg0, arg1);
                 prlrt::report_return_value("bool", ret);
                 break;
             }
@@ -51,7 +51,7 @@ extern "C" {
                 __prlt_bigint arg0;
                 if (!arg0.map_from_serialized_data(args, args_size, true)) return uint32_t(prlrt::ExecutionError::ArgumentDeserializationFailure);
                 if (args_size != 0) return uint32_t(prlrt::ExecutionError::ArgumentDeserializationFailure);
-                if (pContractInstance) ((__prlt_Token *)pContractInstance)->__prli___relaylambda_1_transfer(arg0);
+                if (pContractInstance) ((__prlt_RelayToken *)pContractInstance)->__prli___relaylambda_1_transfer(arg0);
                 break;
             }
             default: return uint32_t(prlrt::ExecutionError::FunctionNotFound);
@@ -62,32 +62,32 @@ extern "C" {
             return uint32_t(prlrt::ExecutionError::RuntimeException) | (uint32_t(prlrt::ExceptionType::UnknownException) << 8);
         }
         
-        if (pContractInstance) ((__prlt_Token *)pContractInstance)->__prli___transaction.clear_supplied_tokens();
+        if (pContractInstance) ((__prlt_RelayToken *)pContractInstance)->__prli___transaction.clear_supplied_tokens();
         return uint32_t(prlrt::ExecutionError::NoError);
     }
     
-    API_EXPORT uint32_t Contract_chsimu_Token_6_ContractCallEntry(void *pContractInstance, uint32_t functionId, const void **ptrs, uint32_t numPtrs) {
+    API_EXPORT uint32_t Contract_chsimu_RelayToken_6_ContractCallEntry(void *pContractInstance, uint32_t functionId, const void **ptrs, uint32_t numPtrs) {
         return uint32_t(prlrt::ExecutionError::RuntimeException) | (uint32_t(prlrt::ExceptionType::CrossCallFunctionNotFound) << 8);
     }
     
-    API_EXPORT void Contract_chsimu_Token_6_InitTables() {
+    API_EXPORT void Contract_chsimu_RelayToken_6_InitTables() {
     }
     
-    API_EXPORT void* Contract_chsimu_Token_6_CreateInstance(prlrt::IRuntimeInterface *pInterface, uint64_t curContractId, const uint64_t *importedContractIds, uint32_t numImportedContracts, uint64_t gas_limit) {
+    API_EXPORT void* Contract_chsimu_RelayToken_6_CreateInstance(prlrt::IRuntimeInterface *pInterface, uint64_t curContractId, const uint64_t *importedContractIds, uint32_t numImportedContracts, uint64_t gas_limit) {
         prlrt::RemainingGas = gas_limit;
         if (numImportedContracts != 0) return nullptr;
         prlrt::g_executionEngineInterface = pInterface;
-        __prlt_Token *ret = new __prlt_Token;
+        __prlt_RelayToken *ret = new __prlt_RelayToken;
         if (ret) ret->contract_id = curContractId;
         return ret;
     }
     
-    API_EXPORT void Contract_chsimu_Token_6_DestroyInstance(void *pContract) {
-        delete (__prlt_Token *)pContract;
+    API_EXPORT void Contract_chsimu_RelayToken_6_DestroyInstance(void *pContract) {
+        delete (__prlt_RelayToken *)pContract;
     }
     
-    API_EXPORT bool Contract_chsimu_Token_6_MapContractContextToInstance(void *pInstance, prlrt::ContractContextType type, uint8_t *buffer, uint32_t bufferSize) {
-        __prlt_Token *pClassInst = (__prlt_Token *)pInstance;
+    API_EXPORT bool Contract_chsimu_RelayToken_6_MapContractContextToInstance(void *pInstance, prlrt::ContractContextType type, uint8_t *buffer, uint32_t bufferSize) {
+        __prlt_RelayToken *pClassInst = (__prlt_RelayToken *)pInstance;
         uint8_t *read_ptr = buffer;
         prlrt::serialize_size_type readbuf_size = prlrt::serialize_size_type(bufferSize);
         try{
@@ -131,8 +131,8 @@ extern "C" {
         return false;
     }
     
-    API_EXPORT uint32_t Contract_chsimu_Token_6_GetContractContextSerializeSize(void *pInstance, prlrt::ContractContextType type) {
-        __prlt_Token *pClassInst = (__prlt_Token *)pInstance;
+    API_EXPORT uint32_t Contract_chsimu_RelayToken_6_GetContractContextSerializeSize(void *pInstance, prlrt::ContractContextType type) {
+        __prlt_RelayToken *pClassInst = (__prlt_RelayToken *)pInstance;
         uint32_t ret = 0;
         try{
             switch (type) {
@@ -165,8 +165,8 @@ extern "C" {
         return ret;
     }
     
-    API_EXPORT uint32_t Contract_chsimu_Token_6_SerializeOutContractContext(void *pInstance, prlrt::ContractContextType type, uint8_t *buffer) {
-        __prlt_Token *pClassInst = (__prlt_Token *)pInstance;
+    API_EXPORT uint32_t Contract_chsimu_RelayToken_6_SerializeOutContractContext(void *pInstance, prlrt::ContractContextType type, uint8_t *buffer) {
+        __prlt_RelayToken *pClassInst = (__prlt_RelayToken *)pInstance;
         uint8_t *write_ptr = buffer;
         prlrt::serialize_size_type item_size = 0;
         
@@ -203,14 +203,14 @@ extern "C" {
         
         return uint32_t(prlrt::ExecutionError::NoError);
     }
-    API_EXPORT uint32_t Contract_chsimu_Token_6_InitGasTable(uint16_t* gas_cost_tbl, uint8_t gas_tbl_size) {
+    API_EXPORT uint32_t Contract_chsimu_RelayToken_6_InitGasTable(uint16_t* gas_cost_tbl, uint8_t gas_tbl_size) {
         prlrt::gas_costs = gas_cost_tbl;
         return uint32_t(prlrt::ExecutionError::NoError);
     }
-    API_EXPORT uint64_t Contract_chsimu_Token_6_GetRemainingGas() {
+    API_EXPORT uint64_t Contract_chsimu_RelayToken_6_GetRemainingGas() {
         return prlrt::RemainingGas;
     }
-    API_EXPORT uint32_t Contract_chsimu_Token_6_SetRemainingGas(uint64_t remainingGas) {
+    API_EXPORT uint32_t Contract_chsimu_RelayToken_6_SetRemainingGas(uint64_t remainingGas) {
         prlrt::RemainingGas = remainingGas;
         return uint32_t(prlrt::ExecutionError::NoError);
     }

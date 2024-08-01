@@ -22,8 +22,10 @@
   (type $t20 (func (param i32 i32 i32 i32 i32 i32) (result i32)))
   (type $t21 (func (param i32 i64 i32 i32 i64) (result i32)))
   (import "env" "GCLEvent_Exception" (func $GCLEvent_Exception (type $t2)))
+  (import "env" "GCLBigintAssign" (func $GCLBigintAssign (type $t9)))
   (import "env" "GCLReleaseBigint" (func $GCLReleaseBigint (type $t14)))
   (import "env" "GCLCreateBigint" (func $GCLCreateBigint (type $t15)))
+  (import "env" "GCLBigintAssignInt64" (func $GCLBigintAssignInt64 (type $t9)))
   (import "env" "GCLTransaction_GetSuppliedTokensCount" (func $GCLTransaction_GetSuppliedTokensCount (type $t11)))
   (import "env" "GCLTransaction_GetSuppliedToken" (func $GCLTransaction_GetSuppliedToken (type $t16)))
   (import "env" "GCLBigintInitFromEmbedded" (func $GCLBigintInitFromEmbedded (type $t17)))
@@ -31,8 +33,11 @@
   (import "env" "GCLBigintGetEmbeddedSize" (func $GCLBigintGetEmbeddedSize (type $t13)))
   (import "env" "GCLBigintEmbed" (func $GCLBigintEmbed (type $t18)))
   (import "env" "GCLReportOrphanToken" (func $GCLReportOrphanToken (type $t9)))
+  (import "env" "GCLBigintCompare" (func $GCLBigintCompare (type $t19)))
+  (import "env" "GCLBigintSubInplace" (func $GCLBigintSubInplace (type $t9)))
   (import "env" "GCLEmitRelayToScope" (func $GCLEmitRelayToScope (type $t20)))
   (import "env" "GCLBigintIsEmbeddable" (func $GCLBigintIsEmbeddable (type $t13)))
+  (import "env" "GCLBigintAddInplace" (func $GCLBigintAddInplace (type $t9)))
   (import "wasi_snapshot_preview1" "proc_exit" (func $__wasi_proc_exit (type $t0)))
   (import "env" "malloc" (func $malloc (type $t1)))
   (import "env" "free" (func $free (type $t0)))
@@ -1096,7 +1101,7 @@
     i64.store
     local.get $l1
     i64.const 0
-    bigint.assign
+    call $GCLBigintAssignInt64
     local.get $p0)
   (func $prlrt::__prlt_bigint::__prlt_bigint_prlrt::__prlt_bigint_const&_ (type $t3) (param $p0 i32) (param $p1 i32) (result i32)
     (local $l2 i64)
@@ -1113,13 +1118,13 @@
     local.get $l2
     local.get $p1
     i64.load
-    bigint.assign
+    call $GCLBigintAssign
     local.get $p0)
   (func $prlrt::__prlt_bigint::~__prlt_bigint__ (type $t0) (param $p0 i32)
     local.get $p0
     i64.load
     call $GCLReleaseBigint)
-  (func $Contract_chsimu_Token_6_TransactionCallEntry (type $t12) (param $p0 i32) (param $p1 i32) (param $p2 i32) (param $p3 i32) (result i32)
+  (func $Contract_chsimu_RelayToken_6_TransactionCallEntry (type $t12) (param $p0 i32) (param $p1 i32) (param $p2 i32) (param $p3 i32) (result i32)
     (local $l4 i32) (local $l5 i32) (local $l6 i32) (local $l7 i32) (local $l8 i32) (local $l9 i32) (local $l10 i32) (local $l11 i32) (local $l12 i32) (local $l13 i32) (local $l14 i32) (local $l15 i32) (local $l16 i32)
     global.get $__stack_pointer
     i32.const 144
@@ -1366,7 +1371,7 @@
             i64.load
             local.get $l7
             i64.load
-            bigint.eq
+            call $GCLBigintCompare
             i32.const 0
             i32.ge_s
             local.tee $l14
@@ -1390,7 +1395,7 @@
               i64.load
               local.get $l7
               i64.load
-              bigint.sub
+              call $GCLBigintSubInplace
               local.get $p1
               call $prlrt::__prlt_bigint::test_overflow___const
               global.get $__stack_pointer
@@ -1854,7 +1859,7 @@
           i64.load
           local.get $p1
           i64.load
-          bigint.add
+          call $GCLBigintAddInplace
           local.get $p2
           call $prlrt::__prlt_bigint::test_overflow___const
           local.get $p1
@@ -2149,9 +2154,9 @@
       local.get $l1
       call $free
     end)
-  (func $Contract_chsimu_Token_6_ContractCallEntry (type $t12) (param $p0 i32) (param $p1 i32) (param $p2 i32) (param $p3 i32) (result i32)
+  (func $Contract_chsimu_RelayToken_6_ContractCallEntry (type $t12) (param $p0 i32) (param $p1 i32) (param $p2 i32) (param $p3 i32) (result i32)
     i32.const 4099)
-  (func $Contract_chsimu_Token_6_CreateInstance (type $t21) (param $p0 i32) (param $p1 i64) (param $p2 i32) (param $p3 i32) (param $p4 i64) (result i32)
+  (func $Contract_chsimu_RelayToken_6_CreateInstance (type $t21) (param $p0 i32) (param $p1 i64) (param $p2 i32) (param $p3 i32) (param $p4 i64) (result i32)
     (local $l5 i32)
     global.get $__memory_base
     i32.const 1568
@@ -2232,7 +2237,7 @@
       i64.store
     end
     local.get $p2)
-  (func $Contract_chsimu_Token_6_DestroyInstance (type $t0) (param $p0 i32)
+  (func $Contract_chsimu_RelayToken_6_DestroyInstance (type $t0) (param $p0 i32)
     local.get $p0
     if $I0
       local.get $p0
@@ -2247,7 +2252,7 @@
     end
     local.get $p0
     call $free)
-  (func $Contract_chsimu_Token_6_MapContractContextToInstance (type $t12) (param $p0 i32) (param $p1 i32) (param $p2 i32) (param $p3 i32) (result i32)
+  (func $Contract_chsimu_RelayToken_6_MapContractContextToInstance (type $t12) (param $p0 i32) (param $p1 i32) (param $p2 i32) (param $p3 i32) (result i32)
     (local $l4 i32) (local $l5 i32) (local $l6 i32) (local $l7 i32) (local $l8 i32) (local $l9 i32)
     global.get $__stack_pointer
     i32.const 16
@@ -2371,7 +2376,7 @@
     i32.add
     global.set $__stack_pointer
     local.get $p2)
-  (func $Contract_chsimu_Token_6_GetContractContextSerializeSize (type $t3) (param $p0 i32) (param $p1 i32) (result i32)
+  (func $Contract_chsimu_RelayToken_6_GetContractContextSerializeSize (type $t3) (param $p0 i32) (param $p1 i32) (result i32)
     (local $l2 i32)
     local.get $p1
     i32.const 3
@@ -2396,7 +2401,7 @@
     local.get $p0
     i64.load
     call $GCLBigintGetEmbeddedSize)
-  (func $Contract_chsimu_Token_6_SerializeOutContractContext (type $t8) (param $p0 i32) (param $p1 i32) (param $p2 i32) (result i32)
+  (func $Contract_chsimu_RelayToken_6_SerializeOutContractContext (type $t8) (param $p0 i32) (param $p1 i32) (param $p2 i32) (result i32)
     (local $l3 i32)
     i32.const 5
     local.set $l3
@@ -2466,19 +2471,19 @@
     i64.load
     local.get $p1
     call $GCLBigintEmbed)
-  (func $Contract_chsimu_Token_6_InitGasTable (type $t3) (param $p0 i32) (param $p1 i32) (result i32)
+  (func $Contract_chsimu_RelayToken_6_InitGasTable (type $t3) (param $p0 i32) (param $p1 i32) (result i32)
     global.get $__memory_base
     i32.const 1576
     i32.add
     local.get $p0
     i32.store
     i32.const 0)
-  (func $Contract_chsimu_Token_6_GetRemainingGas (type $t15) (result i64)
+  (func $Contract_chsimu_RelayToken_6_GetRemainingGas (type $t15) (result i64)
     global.get $__memory_base
     i32.const 1568
     i32.add
     i64.load)
-  (func $Contract_chsimu_Token_6_SetRemainingGas (type $t13) (param $p0 i64) (result i32)
+  (func $Contract_chsimu_RelayToken_6_SetRemainingGas (type $t13) (param $p0 i64) (result i32)
     global.get $__memory_base
     i32.const 1568
     i32.add
@@ -2530,7 +2535,7 @@
         i64.load
         local.get $l1
         i64.load
-        bigint.eq
+        call $GCLBigintCompare
         i32.const 0
         i32.gt_s
         local.set $l2
@@ -5037,17 +5042,17 @@
   (global $GOT.data.internal.__THREW__ (mut i32) (i32.const 1596))
   (global $GOT.data.internal.__threwValue (mut i32) (i32.const 1600))
   (export "__wasm_apply_data_relocs" (func $__wasm_apply_data_relocs))
-  (export "Contract_chsimu_Token_6_TransactionCallEntry" (func $Contract_chsimu_Token_6_TransactionCallEntry))
-  (export "Contract_chsimu_Token_6_ContractCallEntry" (func $Contract_chsimu_Token_6_ContractCallEntry))
-  (export "Contract_chsimu_Token_6_InitTables" (func $__wasm_call_ctors))
-  (export "Contract_chsimu_Token_6_CreateInstance" (func $Contract_chsimu_Token_6_CreateInstance))
-  (export "Contract_chsimu_Token_6_DestroyInstance" (func $Contract_chsimu_Token_6_DestroyInstance))
-  (export "Contract_chsimu_Token_6_MapContractContextToInstance" (func $Contract_chsimu_Token_6_MapContractContextToInstance))
-  (export "Contract_chsimu_Token_6_GetContractContextSerializeSize" (func $Contract_chsimu_Token_6_GetContractContextSerializeSize))
-  (export "Contract_chsimu_Token_6_SerializeOutContractContext" (func $Contract_chsimu_Token_6_SerializeOutContractContext))
-  (export "Contract_chsimu_Token_6_InitGasTable" (func $Contract_chsimu_Token_6_InitGasTable))
-  (export "Contract_chsimu_Token_6_GetRemainingGas" (func $Contract_chsimu_Token_6_GetRemainingGas))
-  (export "Contract_chsimu_Token_6_SetRemainingGas" (func $Contract_chsimu_Token_6_SetRemainingGas))
+  (export "Contract_chsimu_RelayToken_6_TransactionCallEntry" (func $Contract_chsimu_RelayToken_6_TransactionCallEntry))
+  (export "Contract_chsimu_RelayToken_6_ContractCallEntry" (func $Contract_chsimu_RelayToken_6_ContractCallEntry))
+  (export "Contract_chsimu_RelayToken_6_InitTables" (func $__wasm_call_ctors))
+  (export "Contract_chsimu_RelayToken_6_CreateInstance" (func $Contract_chsimu_RelayToken_6_CreateInstance))
+  (export "Contract_chsimu_RelayToken_6_DestroyInstance" (func $Contract_chsimu_RelayToken_6_DestroyInstance))
+  (export "Contract_chsimu_RelayToken_6_MapContractContextToInstance" (func $Contract_chsimu_RelayToken_6_MapContractContextToInstance))
+  (export "Contract_chsimu_RelayToken_6_GetContractContextSerializeSize" (func $Contract_chsimu_RelayToken_6_GetContractContextSerializeSize))
+  (export "Contract_chsimu_RelayToken_6_SerializeOutContractContext" (func $Contract_chsimu_RelayToken_6_SerializeOutContractContext))
+  (export "Contract_chsimu_RelayToken_6_InitGasTable" (func $Contract_chsimu_RelayToken_6_InitGasTable))
+  (export "Contract_chsimu_RelayToken_6_GetRemainingGas" (func $Contract_chsimu_RelayToken_6_GetRemainingGas))
+  (export "Contract_chsimu_RelayToken_6_SetRemainingGas" (func $Contract_chsimu_RelayToken_6_SetRemainingGas))
   (export "_initialize" (func $__wasm_call_ctors))
   (export "__errno_location" (func $__errno_location))
   (export "setThrew" (func $setThrew))

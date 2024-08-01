@@ -1,4 +1,4 @@
-contract Token {
+contract RelayToken {
     @address bigint balance;
     
     @address function bool transfer(address to, bigint amount) export
