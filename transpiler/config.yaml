@@ -163,3 +163,7 @@ excludes:
   - GCLTransaction_GetSuppliedTokensCount
   - GCLReportOrphanToken
   - GCLTransaction_GetSuppliedToken
+  - GCLEmitRelayToScope
+  - GCLBigintInitFromEmbedded
+  - GCLBigintEmbed
+  - GCLBigintIsEmbeddable

@@ -26,9 +26,13 @@
   (import "env" "GCLCreateBigint" (func $GCLCreateBigint (type $t15)))
   (import "env" "GCLTransaction_GetSuppliedTokensCount" (func $GCLTransaction_GetSuppliedTokensCount (type $t11)))
   (import "env" "GCLTransaction_GetSuppliedToken" (func $GCLTransaction_GetSuppliedToken (type $t16)))
+  (import "env" "GCLBigintInitFromEmbedded" (func $GCLBigintInitFromEmbedded (type $t17)))
   (import "env" "GCLReportReturnValue" (func $GCLReportReturnValue (type $t10)))
   (import "env" "GCLBigintGetEmbeddedSize" (func $GCLBigintGetEmbeddedSize (type $t13)))
+  (import "env" "GCLBigintEmbed" (func $GCLBigintEmbed (type $t18)))
   (import "env" "GCLReportOrphanToken" (func $GCLReportOrphanToken (type $t9)))
+  (import "env" "GCLEmitRelayToScope" (func $GCLEmitRelayToScope (type $t20)))
+  (import "env" "GCLBigintIsEmbeddable" (func $GCLBigintIsEmbeddable (type $t13)))
   (import "wasi_snapshot_preview1" "proc_exit" (func $__wasi_proc_exit (type $t0)))
   (import "env" "malloc" (func $malloc (type $t1)))
   (import "env" "free" (func $free (type $t0)))
@@ -1689,7 +1693,7 @@
               local.get $p2
               local.get $p1
               i32.sub
-              todo
+              call $GCLEmitRelayToScope
               i32.eqz
               if $I26
                 local.get $l5
@@ -2053,7 +2057,7 @@
     i32.load
     local.get $p2
     i32.load
-    todo
+    call $GCLBigintInitFromEmbedded
     local.set $l3
     global.get $__memory_base
     i32.const 1576
@@ -2461,7 +2465,7 @@
     local.get $p0
     i64.load
     local.get $p1
-    todo
+    call $GCLBigintEmbed)
   (func $Contract_chsimu_Token_6_InitGasTable (type $t3) (param $p0 i32) (param $p1 i32) (result i32)
     global.get $__memory_base
     i32.const 1576
@@ -2865,7 +2869,7 @@
     global.set $__stack_pointer
     local.get $p0
     i64.load
-    todo
+    call $GCLBigintIsEmbeddable
     i32.eqz
     if $I0
       global.get $__memory_base
