@@ -10,7 +10,7 @@
 
 ```sh
 cd C:\Users\IDEA\AppData\Local\GCL\GCL_Dev_Environment\bin
-.\chsimu.exe "d:\nuts\softwares\console\contract\Math.gclts" -count=4 -WASM -stdout
+.\chsimu.exe "d:\nuts\softwares\console\contract\Token.gclts" -count=4 -WASM -stdout
 ```
 
 ## 转译 WASM 代码
@@ -18,13 +18,13 @@ cd C:\Users\IDEA\AppData\Local\GCL\GCL_Dev_Environment\bin
 1. 通过 [wabt 工具](https://github.com/WebAssembly/wabt) 将 wasm 二进制文件解析为可读的 wat 格式文件：
 
 ```sh
-.\wabt-1.0.35\bin\wasm2wat.exe C:\Users\IDEA\AppData\Roaming\.gcl\chsimu_repo\wasm\bin\1_0000001400100001_Math.wasm -o contract\1_0000001400100001_Math.wat --generate-names --enable-function-references
+.\wabt-1.0.35\bin\wasm2wat.exe D:\Users\IDEA\AppData\Roaming\.gcl\chsimu_repo\wasm\bin\1_0000001400100001_Token.wasm -o contract\1_0000001400100001_Token.wat --generate-names --enable-function-references
 ```
 
 2. 转译器将 wat 文件中的 GCL 函数调用转译为课题二的 wasm 专用指令。注意转译器程序依赖 vs 运行时，[下载链接](https://download.visualstudio.microsoft.com/download/pr/30682086-8872-4c7d-b066-0446b278141b/6c2a4176652e213613187c22e92d15d6e37347f8cfa51b5e5da1ad4871155635/vs_Community.exe)
 
 ```sh
-.\transpiler\transpiler.exe --config transpiler\config.yaml --input contract\1_0000001400100001_Math.wat --output contract\Math.wat
+.\transpiler\transpiler.exe --config transpiler\config.yaml --input contract\1_0000001400100001_Token.wat --output contract\Token.wat
 ```
 
 ## 运行时执行
