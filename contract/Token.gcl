@@ -1,0 +1,24 @@
+contract Token {
+    @address bigint balance;
+    
+    @address function bool transfer(address to, bigint amount) export
+    {
+        if(balance >= amount)
+        {
+            balance -= amount;
+            relay@to (^amount)
+            {
+                balance += amount;
+            }
+
+            return true;
+        }
+
+        return false;
+    }
+
+    @address function mint(bigint value) {
+        __debug.assert(value >= 0ib);
+        balance += value;
+    }
+}
