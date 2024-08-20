@@ -7,9 +7,9 @@ chain.deploy @1 Token.gcl
 log.highlight Token test
 log Perparing test transactions
 
-state.set Token.address @all { balance:"10000000000000" }
+// state.set Token.address @all { "balance":"10000000000000" }
 
-txn1[] = Token.mint @random {value:"10000000000000" }
+Token.mint @random {value: 1000 }
 
 chain.info
 

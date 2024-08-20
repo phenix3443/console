@@ -6,14 +6,14 @@ struct __prlt_Token {
     prlrt::__prlt___event __prli___event;
     prlrt::__prlt___debug __prli___debug;
     
-    __prlt_bigint __prli_balance;
+    __prlt_uint32 __prli_balance;
     
     __prlt_uint64 __prli___id() { return contract_id; }
     __prlt_bool __prli___valid()  { return prlrt::contract_has_template(contract_id, -1); }
     __prlt_address __prli___address() { __prlt_address ret; ret.SetAsContract(contract_id); return ret; }
     __prlt_token __prli___mint(__prlt_uint64 id, __prlt_bigint amount) { return prlrt::mint(id, amount); }
     __prlt_bool __prli___burn(__prlt_token burn_token) { return prlrt::burn(burn_token); }
-    void __prli_mint(__prlt_bigint __prli_value) { prlrt::burn_gas_function_call();
+    void __prli_mint(__prlt_uint32 __prli_value) { prlrt::burn_gas_function_call();
         __prli_balance += __prli_value;
     }
 };
@@ -25,7 +25,7 @@ extern "C" {
             switch (functionId){
             case 0:
             {
-                __prlt_bigint arg0;
+                __prlt_uint32 arg0;
                 if (!arg0.map_from_serialized_data(args, args_size, true)) return uint32_t(prlrt::ExecutionError::ArgumentDeserializationFailure);
                 if (args_size != 0) return uint32_t(prlrt::ExecutionError::ArgumentDeserializationFailure);
                 if (pContractInstance) ((__prlt_Token *)pContractInstance)->__prli_mint(arg0);

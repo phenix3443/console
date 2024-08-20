@@ -1,6 +1,6 @@
 contract Token {
-    @address bigint balance;
-    @address function mint(bigint value) export {
+    @address uint32 balance;
+    @address function mint(uint32 value) export {
         balance += value;
     }
 }
