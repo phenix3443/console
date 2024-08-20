@@ -8,28 +8,23 @@
   (type $t6 (func (param i32 i32 i32 i32 i32)))
   (type $t7 (func))
   (type $t8 (func (param i32 i32 i32) (result i32)))
-  (type $t9 (func (param i64 i64)))
-  (type $t10 (func (result i32)))
-  (type $t11 (func (param i32 i32 i32 i32) (result i32)))
-  (type $t12 (func (param i32 i32 i32)))
-  (type $t13 (func (param i64) (result i32)))
-  (type $t14 (func (param i64)))
-  (type $t15 (func (result i64)))
+  (type $t9 (func (result i32)))
+  (type $t10 (func (param i32 i32 i32 i32) (result i32)))
+  (type $t11 (func (param i32 i32 i32)))
+  (type $t12 (func (param i64)))
+  (type $t13 (func (result i64)))
+  (type $t14 (func (param i64 i64)))
+  (type $t15 (func (param i64) (result i32)))
   (type $t16 (func (param i32 i32 i64)))
-  (type $t17 (func (param i64 i32 i32) (result i32)))
-  (type $t18 (func (param i64 i32)))
-  (type $t19 (func (param i64 i64) (result i32)))
-  (type $t20 (func (param i32 i64 i32 i32 i64) (result i32)))
+  (type $t17 (func (param i64 i64) (result i32)))
+  (type $t18 (func (param i32 i64 i32 i32 i64) (result i32)))
   (import "env" "GCLEvent_Exception" (func $GCLEvent_Exception (type $t2)))
-  (import "env" "GCLReleaseBigint" (func $GCLReleaseBigint (type $t14)))
-  (import "env" "GCLCreateBigint" (func $GCLCreateBigint (type $t15)))
-  (import "env" "GCLTransaction_GetSuppliedTokensCount" (func $GCLTransaction_GetSuppliedTokensCount (type $t10)))
+  (import "env" "GCLReleaseBigint" (func $GCLReleaseBigint (type $t12)))
+  (import "env" "GCLCreateBigint" (func $GCLCreateBigint (type $t13)))
+  (import "env" "GCLTransaction_GetSuppliedTokensCount" (func $GCLTransaction_GetSuppliedTokensCount (type $t9)))
   (import "env" "GCLTransaction_GetSuppliedToken" (func $GCLTransaction_GetSuppliedToken (type $t16)))
-  (import "env" "GCLBigintInitFromEmbedded" (func $GCLBigintInitFromEmbedded (type $t17)))
-  (import "env" "GCLBigintGetEmbeddedSize" (func $GCLBigintGetEmbeddedSize (type $t13)))
-  (import "env" "GCLBigintEmbed" (func $GCLBigintEmbed (type $t18)))
-  (import "env" "GCLReportOrphanToken" (func $GCLReportOrphanToken (type $t9)))
-  (import "env" "GCLBigintIsEmbeddable" (func $GCLBigintIsEmbeddable (type $t13)))
+  (import "env" "GCLReportOrphanToken" (func $GCLReportOrphanToken (type $t14)))
+  (import "env" "GCLBigintGetEmbeddedSize" (func $GCLBigintGetEmbeddedSize (type $t15)))
   (import "wasi_snapshot_preview1" "proc_exit" (func $__wasi_proc_exit (type $t1)))
   (import "env" "malloc" (func $malloc (type $t0)))
   (import "env" "free" (func $free (type $t1)))
@@ -44,42 +39,40 @@
     (local $l0 i32) (local $l1 i32) (local $l2 i32) (local $l3 i32) (local $l4 i32) (local $l5 i32) (local $l6 i32) (local $l7 i32) (local $l8 i32) (local $l9 i32) (local $l10 i32)
     global.get $__memory_base
     global.get $__memory_base
-    i32.const 1252
+    i32.const 1244
     i32.add
     local.tee $l0
+    i32.store offset=1004
+    global.get $__memory_base
+    global.get $__memory_base
+    i32.const 111
+    i32.add
+    i32.store offset=1008
+    global.get $__memory_base
+    global.get $__memory_base
+    i32.const 1516
+    i32.add
+    local.tee $l6
     i32.store offset=1012
     global.get $__memory_base
     global.get $__memory_base
-    i32.const 122
+    i32.const 1004
     i32.add
-    i32.store offset=1016
-    global.get $__memory_base
-    global.get $__memory_base
-    i32.const 1524
-    i32.add
-    local.tee $l6
     i32.store offset=1020
     global.get $__memory_base
-    i32.const 1028
-    i32.add
-    global.get $__memory_base
-    i32.const 1012
-    i32.add
-    i32.store
-    global.get $__memory_base
-    i32.const 1032
+    i32.const 1024
     i32.add
     global.get $GOT.func.internal.std::runtime_error::~runtime_error__
     i32.store
     global.get $__memory_base
-    i32.const 1036
+    i32.const 1028
     i32.add
     global.get $__table_base
     i32.const 3
     i32.add
     i32.store
     global.get $__memory_base
-    i32.const 1040
+    i32.const 1032
     i32.add
     global.get $__table_base
     i32.const 4
@@ -87,15 +80,15 @@
     local.tee $l8
     i32.store
     global.get $__memory_base
-    i32.const 1048
+    i32.const 1040
     i32.add
     global.get $__memory_base
-    i32.const 1072
+    i32.const 1064
     i32.add
     local.tee $l1
     i32.store
     global.get $__memory_base
-    i32.const 1052
+    i32.const 1044
     i32.add
     global.get $__table_base
     i32.const 5
@@ -103,28 +96,28 @@
     local.tee $l4
     i32.store
     global.get $__memory_base
-    i32.const 1056
+    i32.const 1048
     i32.add
     global.get $__table_base
     i32.const 6
     i32.add
     i32.store
     global.get $__memory_base
-    i32.const 1060
+    i32.const 1052
     i32.add
     global.get $__table_base
     i32.const 7
     i32.add
     i32.store
     global.get $__memory_base
-    i32.const 1064
+    i32.const 1056
     i32.add
     global.get $__table_base
     i32.const 8
     i32.add
     i32.store
     global.get $__memory_base
-    i32.const 1068
+    i32.const 1060
     i32.add
     global.get $__table_base
     i32.const 9
@@ -134,56 +127,56 @@
     local.get $l0
     i32.store
     global.get $__memory_base
-    i32.const 1076
+    i32.const 1068
     i32.add
     global.get $__memory_base
-    i32.const 146
+    i32.const 135
     i32.add
+    i32.store
+    global.get $__memory_base
+    i32.const 1072
+    i32.add
+    global.get $__memory_base
+    i32.const 1124
+    i32.add
+    local.tee $l1
     i32.store
     global.get $__memory_base
     i32.const 1080
     i32.add
     global.get $__memory_base
-    i32.const 1132
-    i32.add
-    local.tee $l1
-    i32.store
-    global.get $__memory_base
-    i32.const 1088
-    i32.add
-    global.get $__memory_base
-    i32.const 1112
+    i32.const 1104
     i32.add
     local.tee $l2
     i32.store
     global.get $__memory_base
-    i32.const 1092
+    i32.const 1084
     i32.add
     local.get $l4
     i32.store
     global.get $__memory_base
-    i32.const 1096
+    i32.const 1088
     i32.add
     global.get $__table_base
     i32.const 10
     i32.add
     i32.store
     global.get $__memory_base
-    i32.const 1100
+    i32.const 1092
     i32.add
     global.get $__table_base
     i32.const 11
     i32.add
     i32.store
     global.get $__memory_base
-    i32.const 1104
+    i32.const 1096
     i32.add
     global.get $__table_base
     i32.const 12
     i32.add
     i32.store
     global.get $__memory_base
-    i32.const 1108
+    i32.const 1100
     i32.add
     global.get $__table_base
     i32.const 13
@@ -193,125 +186,125 @@
     local.get $l0
     i32.store
     global.get $__memory_base
-    i32.const 1116
+    i32.const 1108
     i32.add
     global.get $__memory_base
-    i32.const 365
+    i32.const 354
     i32.add
     i32.store
     global.get $__memory_base
-    i32.const 1120
+    i32.const 1112
     i32.add
     local.get $l1
     i32.store
     global.get $__memory_base
-    i32.const 1124
+    i32.const 1116
     i32.add
     local.tee $l2
     global.get $__memory_base
-    i32.const 1212
+    i32.const 1204
     i32.add
     local.tee $l4
+    i32.store
+    global.get $__memory_base
+    i32.const 1120
+    i32.add
+    global.get $__memory_base
+    i32.const 615
+    i32.add
+    i32.store
+    local.get $l1
+    global.get $__memory_base
+    i32.const 1296
+    i32.add
+    local.tee $l9
     i32.store
     global.get $__memory_base
     i32.const 1128
     i32.add
     global.get $__memory_base
-    i32.const 626
-    i32.add
-    i32.store
-    local.get $l1
-    global.get $__memory_base
-    i32.const 1304
-    i32.add
-    local.tee $l9
-    i32.store
-    global.get $__memory_base
-    i32.const 1136
-    i32.add
-    global.get $__memory_base
-    i32.const 651
+    i32.const 640
     i32.add
     i32.store
     global.get $__memory_base
-    i32.const 1148
+    i32.const 1140
     i32.add
     local.get $l2
     i32.store
     global.get $__memory_base
-    i32.const 1156
+    i32.const 1148
     i32.add
     local.get $l0
     i32.store
     global.get $__memory_base
-    i32.const 1160
+    i32.const 1152
     i32.add
     global.get $__memory_base
-    i32.const 681
+    i32.const 670
     i32.add
+    i32.store
+    global.get $__memory_base
+    i32.const 1156
+    i32.add
+    global.get $__memory_base
+    i32.const 1528
+    i32.add
+    local.tee $l10
+    i32.store
+    global.get $__memory_base
+    i32.const 1160
+    i32.add
+    local.get $l0
     i32.store
     global.get $__memory_base
     i32.const 1164
     i32.add
     global.get $__memory_base
-    i32.const 1536
+    i32.const 703
     i32.add
-    local.tee $l10
     i32.store
     global.get $__memory_base
     i32.const 1168
     i32.add
-    local.get $l0
-    i32.store
-    global.get $__memory_base
-    i32.const 1172
-    i32.add
-    global.get $__memory_base
-    i32.const 714
-    i32.add
-    i32.store
-    global.get $__memory_base
-    i32.const 1176
-    i32.add
     global.get $GOT.data.internal.typeinfo_for___cxxabiv1::__shim_type_info
     i32.store
     global.get $__memory_base
-    i32.const 1180
+    i32.const 1172
     i32.add
     local.tee $l1
     local.get $l0
     i32.store
     global.get $__memory_base
-    i32.const 1184
+    i32.const 1176
     i32.add
     global.get $__memory_base
-    i32.const 748
+    i32.const 737
     i32.add
     i32.store
     global.get $__memory_base
-    i32.const 1188
+    i32.const 1180
     i32.add
     global.get $GOT.data.internal.typeinfo_for___cxxabiv1::__shim_type_info
     i32.store
     global.get $__memory_base
-    i32.const 1192
+    i32.const 1184
     i32.add
     local.get $l0
     i32.store
     global.get $__memory_base
-    i32.const 1196
+    i32.const 1188
     i32.add
     global.get $__memory_base
-    i32.const 782
+    i32.const 771
     i32.add
     i32.store
     global.get $__memory_base
-    i32.const 1200
+    i32.const 1192
     i32.add
     local.get $l1
     i32.store
     global.get $__memory_base
-    i32.const 1208
+    i32.const 1200
     i32.add
     global.get $GOT.data.internal.typeinfo_for___cxxabiv1::__class_type_info
     i32.store
@@ -322,14 +315,14 @@
     local.tee $l1
     i32.store
     global.get $__memory_base
-    i32.const 1216
+    i32.const 1208
     i32.add
     global.get $__table_base
     i32.const 16
     i32.add
     i32.store
     global.get $__memory_base
-    i32.const 1220
+    i32.const 1212
     i32.add
     global.get $__table_base
     i32.const 17
@@ -337,7 +330,7 @@
     local.tee $l2
     i32.store
     global.get $__memory_base
-    i32.const 1224
+    i32.const 1216
     i32.add
     global.get $__table_base
     i32.const 18
@@ -345,7 +338,7 @@
     local.tee $l3
     i32.store
     global.get $__memory_base
-    i32.const 1228
+    i32.const 1220
     i32.add
     global.get $__table_base
     i32.const 19
@@ -353,31 +346,31 @@
     local.tee $l7
     i32.store
     global.get $__memory_base
-    i32.const 1232
+    i32.const 1224
     i32.add
     global.get $__table_base
     i32.const 20
     i32.add
     i32.store
     global.get $__memory_base
-    i32.const 1236
+    i32.const 1228
     i32.add
     global.get $__table_base
     i32.const 21
     i32.add
     i32.store
     global.get $__memory_base
-    i32.const 1240
+    i32.const 1232
     i32.add
     global.get $__table_base
     i32.const 22
     i32.add
     i32.store
     global.get $__memory_base
-    i32.const 1248
+    i32.const 1240
     i32.add
     global.get $__memory_base
-    i32.const 1284
+    i32.const 1276
     i32.add
     local.tee $l5
     i32.store
@@ -385,43 +378,43 @@
     local.get $l1
     i32.store
     global.get $__memory_base
-    i32.const 1256
+    i32.const 1248
     i32.add
     global.get $__table_base
     i32.const 23
     i32.add
     i32.store
     global.get $__memory_base
-    i32.const 1260
+    i32.const 1252
     i32.add
     local.get $l2
     i32.store
     global.get $__memory_base
-    i32.const 1264
+    i32.const 1256
     i32.add
     local.get $l3
     i32.store
     global.get $__memory_base
-    i32.const 1268
+    i32.const 1260
     i32.add
     local.get $l7
     i32.store
     global.get $__memory_base
-    i32.const 1272
+    i32.const 1264
     i32.add
     global.get $__table_base
     i32.const 24
     i32.add
     i32.store
     global.get $__memory_base
-    i32.const 1276
+    i32.const 1268
     i32.add
     global.get $__table_base
     i32.const 25
     i32.add
     i32.store
     global.get $__memory_base
-    i32.const 1280
+    i32.const 1272
     i32.add
     global.get $__table_base
     i32.const 26
@@ -431,22 +424,22 @@
     local.get $l0
     i32.store
     global.get $__memory_base
-    i32.const 1288
+    i32.const 1280
     i32.add
     global.get $__memory_base
-    i32.const 818
+    i32.const 807
     i32.add
     i32.store
     global.get $__memory_base
-    i32.const 1292
+    i32.const 1284
     i32.add
     global.get $GOT.data.internal.typeinfo_for___cxxabiv1::__class_type_info
     i32.store
     global.get $__memory_base
-    i32.const 1300
+    i32.const 1292
     i32.add
     global.get $__memory_base
-    i32.const 1336
+    i32.const 1328
     i32.add
     local.tee $l5
     i32.store
@@ -454,43 +447,43 @@
     local.get $l1
     i32.store
     global.get $__memory_base
-    i32.const 1308
+    i32.const 1300
     i32.add
     global.get $__table_base
     i32.const 27
     i32.add
     i32.store
     global.get $__memory_base
-    i32.const 1312
+    i32.const 1304
     i32.add
     local.get $l2
     i32.store
     global.get $__memory_base
-    i32.const 1316
+    i32.const 1308
     i32.add
     local.get $l3
     i32.store
     global.get $__memory_base
-    i32.const 1320
+    i32.const 1312
     i32.add
     local.get $l7
     i32.store
     global.get $__memory_base
-    i32.const 1324
+    i32.const 1316
     i32.add
     global.get $__table_base
     i32.const 28
     i32.add
     i32.store
     global.get $__memory_base
-    i32.const 1328
+    i32.const 1320
     i32.add
     global.get $__table_base
     i32.const 29
     i32.add
     i32.store
     global.get $__memory_base
-    i32.const 1332
+    i32.const 1324
     i32.add
     global.get $__table_base
     i32.const 30
@@ -500,27 +493,27 @@
     local.get $l0
     i32.store
     global.get $__memory_base
-    i32.const 1340
+    i32.const 1332
     i32.add
     global.get $__memory_base
-    i32.const 855
+    i32.const 844
     i32.add
     i32.store
     global.get $__memory_base
-    i32.const 1344
+    i32.const 1336
     i32.add
     global.get $GOT.data.internal.typeinfo_for___cxxabiv1::__class_type_info
     i32.store
     global.get $__memory_base
-    i32.const 1352
+    i32.const 1344
     i32.add
     global.get $__memory_base
-    i32.const 1416
+    i32.const 1408
     i32.add
     local.tee $l2
     i32.store
     global.get $__memory_base
-    i32.const 1356
+    i32.const 1348
     i32.add
     global.get $__table_base
     i32.const 2
@@ -528,65 +521,65 @@
     local.tee $l3
     i32.store
     global.get $__memory_base
-    i32.const 1360
+    i32.const 1352
     i32.add
     global.get $__table_base
     i32.const 31
     i32.add
     i32.store
     global.get $__memory_base
-    i32.const 1364
+    i32.const 1356
     i32.add
     global.get $__table_base
     i32.const 32
     i32.add
     i32.store
     global.get $__memory_base
-    i32.const 1372
+    i32.const 1364
     i32.add
     global.get $GOT.data.internal.typeinfo_for_std::bad_array_new_length
     i32.store
     global.get $__memory_base
-    i32.const 1376
+    i32.const 1368
     i32.add
     global.get $GOT.func.internal.std::bad_array_new_length::~bad_array_new_length__
     i32.store
     global.get $__memory_base
-    i32.const 1380
+    i32.const 1372
     i32.add
     global.get $__table_base
     i32.const 33
     i32.add
     i32.store
     global.get $__memory_base
-    i32.const 1384
+    i32.const 1376
     i32.add
     global.get $__table_base
     i32.const 34
     i32.add
     i32.store
     global.get $__memory_base
-    i32.const 1392
+    i32.const 1384
     i32.add
     global.get $__memory_base
-    i32.const 1408
+    i32.const 1400
     i32.add
     local.tee $l1
     i32.store
     global.get $__memory_base
-    i32.const 1396
+    i32.const 1388
     i32.add
     local.get $l3
     i32.store
     global.get $__memory_base
-    i32.const 1400
+    i32.const 1392
     i32.add
     global.get $__table_base
     i32.const 35
     i32.add
     i32.store
     global.get $__memory_base
-    i32.const 1404
+    i32.const 1396
     i32.add
     global.get $__table_base
     i32.const 36
@@ -596,68 +589,68 @@
     local.get $l4
     i32.store
     global.get $__memory_base
-    i32.const 1412
+    i32.const 1404
     i32.add
     global.get $__memory_base
-    i32.const 893
+    i32.const 882
     i32.add
     i32.store
     local.get $l2
     local.get $l0
     i32.store
     global.get $__memory_base
-    i32.const 1420
+    i32.const 1412
     i32.add
     global.get $__memory_base
-    i32.const 906
+    i32.const 895
     i32.add
     i32.store
     global.get $__memory_base
-    i32.const 1424
+    i32.const 1416
     i32.add
     local.get $l1
     i32.store
     global.get $__memory_base
-    i32.const 1428
+    i32.const 1420
     i32.add
     local.get $l0
     i32.store
     global.get $__memory_base
-    i32.const 1432
+    i32.const 1424
     i32.add
     global.get $__memory_base
-    i32.const 919
+    i32.const 908
     i32.add
     i32.store
     global.get $__memory_base
-    i32.const 1436
+    i32.const 1428
     i32.add
     local.get $l2
     i32.store
     global.get $__memory_base
-    i32.const 1444
+    i32.const 1436
     i32.add
     global.get $__memory_base
-    i32.const 1480
+    i32.const 1472
     i32.add
     local.tee $l2
     i32.store
     global.get $__memory_base
-    i32.const 1448
+    i32.const 1440
     i32.add
     global.get $__table_base
     i32.const 1
     i32.add
     i32.store
     global.get $__memory_base
-    i32.const 1452
+    i32.const 1444
     i32.add
     global.get $__table_base
     i32.const 37
     i32.add
     i32.store
     global.get $__memory_base
-    i32.const 1456
+    i32.const 1448
     i32.add
     global.get $__table_base
     i32.const 38
@@ -665,24 +658,24 @@
     local.tee $l3
     i32.store
     global.get $__memory_base
-    i32.const 1464
+    i32.const 1456
     i32.add
     local.get $l6
     i32.store
     global.get $__memory_base
-    i32.const 1468
+    i32.const 1460
     i32.add
     global.get $__table_base
     i32.store
     global.get $__memory_base
-    i32.const 1472
+    i32.const 1464
     i32.add
     global.get $__table_base
     i32.const 39
     i32.add
     i32.store
     global.get $__memory_base
-    i32.const 1476
+    i32.const 1468
     i32.add
     local.get $l8
     i32.store
@@ -690,53 +683,53 @@
     local.get $l0
     i32.store
     global.get $__memory_base
-    i32.const 1484
+    i32.const 1476
     i32.add
     global.get $__memory_base
-    i32.const 944
+    i32.const 933
     i32.add
     i32.store
     global.get $__memory_base
-    i32.const 1488
+    i32.const 1480
     i32.add
     local.get $l1
     i32.store
     global.get $__memory_base
-    i32.const 1496
+    i32.const 1488
     i32.add
     global.get $GOT.data.internal.typeinfo_for_std::length_error
     i32.store
     global.get $__memory_base
-    i32.const 1500
+    i32.const 1492
     i32.add
     global.get $GOT.func.internal.std::length_error::~length_error__
     i32.store
     global.get $__memory_base
-    i32.const 1504
+    i32.const 1496
     i32.add
     global.get $__table_base
     i32.const 40
     i32.add
     i32.store
     global.get $__memory_base
-    i32.const 1508
+    i32.const 1500
     i32.add
     local.get $l3
     i32.store
     global.get $__memory_base
-    i32.const 1512
+    i32.const 1504
     i32.add
     local.get $l0
     i32.store
     global.get $__memory_base
-    i32.const 1516
+    i32.const 1508
     i32.add
     global.get $__memory_base
-    i32.const 960
+    i32.const 949
     i32.add
     i32.store
     global.get $__memory_base
-    i32.const 1520
+    i32.const 1512
     i32.add
     local.get $l2
     i32.store
@@ -744,14 +737,14 @@
     local.get $l0
     i32.store
     global.get $__memory_base
-    i32.const 1528
+    i32.const 1520
     i32.add
     global.get $__memory_base
-    i32.const 977
+    i32.const 966
     i32.add
     i32.store
     global.get $__memory_base
-    i32.const 1532
+    i32.const 1524
     i32.add
     local.get $l1
     i32.store
@@ -759,10 +752,10 @@
     local.get $l4
     i32.store
     global.get $__memory_base
-    i32.const 1540
+    i32.const 1532
     i32.add
     global.get $__memory_base
-    i32.const 995
+    i32.const 984
     i32.add
     i32.store)
   (func $__wasm_apply_global_relocs (type $t7)
@@ -773,11 +766,11 @@
     i32.add
     global.set $GOT.func.internal.std::length_error::~length_error__
     global.get $__memory_base
-    i32.const 1512
+    i32.const 1504
     i32.add
     global.set $GOT.data.internal.typeinfo_for_std::length_error
     global.get $__memory_base
-    i32.const 1492
+    i32.const 1484
     i32.add
     global.set $GOT.data.internal.vtable_for_std::length_error
     global.get $__table_base
@@ -785,54 +778,54 @@
     i32.add
     global.set $GOT.func.internal.std::bad_array_new_length::~bad_array_new_length__
     global.get $__memory_base
-    i32.const 1428
+    i32.const 1420
     i32.add
     global.set $GOT.data.internal.typeinfo_for_std::bad_array_new_length
     global.get $__memory_base
-    i32.const 1388
+    i32.const 1380
     i32.add
     global.set $GOT.data.internal.vtable_for_std::exception
     global.get $__memory_base
-    i32.const 1440
+    i32.const 1432
     i32.add
     global.set $GOT.data.internal.vtable_for_std::logic_error
     global.get $__memory_base
-    i32.const 1460
+    i32.const 1452
     i32.add
     global.set $GOT.data.internal.vtable_for_std::runtime_error
     global.get $__memory_base
-    i32.const 1564
+    i32.const 1556
     i32.add
     global.set $GOT.data.internal.__cxa_new_handler
     global.get $__memory_base
-    i32.const 1168
+    i32.const 1160
     i32.add
     global.set $GOT.data.internal.typeinfo_for___cxxabiv1::__class_type_info
     global.get $__memory_base
-    i32.const 1156
+    i32.const 1148
     i32.add
     global.set $GOT.data.internal.typeinfo_for___cxxabiv1::__shim_type_info
     global.get $__memory_base
-    i32.const 1192
+    i32.const 1184
     i32.add
     global.set $GOT.data.internal.typeinfo_for___cxxabiv1::__pointer_type_info
     global.get $__memory_base
-    i32.const 1348
+    i32.const 1340
     i32.add
     global.set $GOT.data.internal.vtable_for_std::bad_alloc
     global.get $__memory_base
-    i32.const 1368
+    i32.const 1360
     i32.add
     global.set $GOT.data.internal.vtable_for_std::bad_array_new_length
     global.get $__memory_base
-    i32.const 1568
+    i32.const 1560
     i32.add
     global.set $GOT.data.internal.__THREW__
     global.get $__memory_base
-    i32.const 1572
+    i32.const 1564
     i32.add
     global.set $GOT.data.internal.__threwValue)
-  (func $prlrt::burn_gas_unsigned_long_long_ (type $t14) (param $p0 i64)
+  (func $prlrt::burn_gas_unsigned_long_long_ (type $t12) (param $p0 i64)
     (local $l1 i32) (local $l2 i32) (local $l3 i32) (local $l4 i64)
     global.get $__stack_pointer
     i32.const 16
@@ -840,11 +833,11 @@
     local.tee $l2
     global.set $__stack_pointer
     global.get $__memory_base
-    i32.load8_u offset=1008
+    i32.load8_u offset=1000
     if $I0
       local.get $p0
       global.get $__memory_base
-      i32.const 1544
+      i32.const 1536
       i32.add
       local.tee $l1
       i64.load
@@ -856,8 +849,6 @@
         i64.store
         local.get $l2
         global.get $__memory_base
-        i32.const 14
-        i32.add
         call $std::__2::basic_string<char__std::__2::char_traits<char>__std::__2::allocator<char>>::basic_string<std::nullptr_t>_char_const*_
         local.tee $l3
         i32.const 30
@@ -995,7 +986,7 @@
     i32.store16 offset=8
     local.get $l2
     global.get $__memory_base
-    i32.const 1032
+    i32.const 1024
     i32.add
     i32.store
     local.get $l2
@@ -1031,7 +1022,7 @@
     i32.store offset=12
     local.get $l3
     global.get $__memory_base
-    i32.const 1052
+    i32.const 1044
     i32.add
     i32.store
     local.get $l3
@@ -1081,23 +1072,19 @@
     i64.const 0
     bigint.assign
     local.get $p0)
-  (func $prlrt::__prlt_bigint::~__prlt_bigint__ (type $t1) (param $p0 i32)
-    local.get $p0
-    i64.load
-    call $GCLReleaseBigint)
-  (func $Contract_chsimu_Token_6_TransactionCallEntry (type $t11) (param $p0 i32) (param $p1 i32) (param $p2 i32) (param $p3 i32) (result i32)
-    (local $l4 i32) (local $l5 i32) (local $l6 i32) (local $l7 i32) (local $l8 i32) (local $l9 i32) (local $l10 i32) (local $l11 i32) (local $l12 i32) (local $l13 i32) (local $l14 i32) (local $l15 i32) (local $l16 i32) (local $l17 i32) (local $l18 i64)
+  (func $Contract_chsimu_Token_6_TransactionCallEntry (type $t10) (param $p0 i32) (param $p1 i32) (param $p2 i32) (param $p3 i32) (result i32)
+    (local $l4 i32) (local $l5 i32) (local $l6 i32) (local $l7 i32) (local $l8 i32) (local $l9 i32) (local $l10 i32) (local $l11 i32) (local $l12 i32) (local $l13 i32) (local $l14 i32) (local $l15 i32) (local $l16 i32) (local $l17 i32)
     global.get $__stack_pointer
-    i32.const 48
+    i32.const 16
     i32.sub
-    local.tee $l9
+    local.tee $l8
     global.set $__stack_pointer
-    local.get $l9
+    local.get $l8
     local.get $p3
-    i32.store offset=40
-    local.get $l9
+    i32.store offset=8
+    local.get $l8
     local.get $p2
-    i32.store offset=44
+    i32.store offset=12
     local.get $p0
     if $I0
       i32.const 0
@@ -1108,10 +1095,10 @@
       local.tee $l4
       global.set $__stack_pointer
       call $GCLTransaction_GetSuppliedTokensCount
-      local.set $l10
+      local.set $l11
       loop $L1
         local.get $p2
-        local.get $l10
+        local.get $l11
         i32.eq
         if $I2
           local.get $l4
@@ -1179,21 +1166,21 @@
             i32.const 8
             i32.add
             call $std::__2::__split_buffer<prlrt::__prlt_token__std::__2::allocator<prlrt::__prlt_token>&>::__split_buffer_unsigned_long__unsigned_long__std::__2::allocator<prlrt::__prlt_token>&_
-            local.tee $l11
+            local.tee $l10
             i32.load offset=8
             local.get $l5
             call $prlrt::__prlt_token::__prlt_token_prlrt::__prlt_token_const&_
             drop
-            local.get $l11
-            local.get $l11
+            local.get $l10
+            local.get $l10
             i32.load offset=8
             i32.const 8
             i32.add
             i32.store offset=8
             local.get $l6
-            local.get $l11
+            local.get $l10
             call $std::__2::vector<prlrt::__prlt_token__std::__2::allocator<prlrt::__prlt_token>>::__swap_out_circular_buffer_std::__2::__split_buffer<prlrt::__prlt_token__std::__2::allocator<prlrt::__prlt_token>&>&_
-            local.get $l11
+            local.get $l10
             call $std::__2::__split_buffer<prlrt::__prlt_token__std::__2::allocator<prlrt::__prlt_token>&>::~__split_buffer__
             local.get $p3
             i32.const 32
@@ -1216,398 +1203,412 @@
       local.get $p1
       br_if $B5
       drop
-      local.get $l9
-      i32.const 24
-      i32.add
-      call $prlrt::__prlt_bigint::__prlt_bigint_long_long_
-      local.tee $l11
-      local.get $l9
-      i32.const 44
-      i32.add
-      local.get $l9
-      i32.const 40
-      i32.add
-      call $prlrt::__prlt_bigint::map_from_serialized_data_unsigned_char*&__unsigned_int&__bool_
-      i32.const 1
-      i32.xor
-      local.get $l9
-      i32.load offset=40
+      local.get $l8
       i32.const 0
-      i32.ne
-      i32.or
-      local.tee $p2
-      local.get $p0
-      i32.eqz
-      i32.or
-      i32.eqz
-      if $I6
-        local.get $l9
+      i32.store
+      block $B6
+        local.get $l8
+        local.get $l8
+        i32.const 12
+        i32.add
+        local.get $l8
         i32.const 8
         i32.add
-        local.tee $l15
+        call $prlrt::____uint<unsigned_int>::map_from_serialized_data_unsigned_char*&__unsigned_int&__bool_
+        i32.const 1
+        i32.xor
+        local.get $l8
+        i32.load offset=8
         i32.const 0
-        i32.store offset=8
-        local.get $l15
-        i64.const 0
-        i64.store
-        local.get $l15
-        call $GCLCreateBigint
-        local.tee $l18
-        i64.store
-        local.get $l18
-        local.get $l11
-        i64.load
-        bigint.assign
-        global.get $__memory_base
-        i32.const 1552
-        i32.add
-        i32.load
-        i64.load16_u offset=76
-        call $prlrt::burn_gas_unsigned_long_long_
-        global.get $__memory_base
-        i32.const 1552
-        i32.add
-        i32.load
+        i32.ne
+        i32.or
         local.tee $p1
-        i64.load16_u offset=18
-        local.get $p1
-        i64.load16_u offset=24
-        i64.add
         local.get $p0
-        i32.const 24
-        i32.add
-        local.get $l15
-        call $prlrt::__prlt_bigint::bigger_gas_coefficient_prlrt::__prlt_bigint_const&__const
-        i64.extend_i32_u
-        i64.mul
-        call $prlrt::burn_gas_unsigned_long_long_
-        local.get $p0
-        i64.load offset=24
-        local.get $l15
-        i64.load
-        bigint.add
-        global.get $__stack_pointer
-        i32.const 32
-        i32.sub
-        local.tee $l16
-        global.set $__stack_pointer
-        local.get $p0
-        i64.load offset=24
-        call $GCLBigintIsEmbeddable
+        i32.eqz
+        i32.or
         i32.eqz
         if $I7
+          local.get $l8
+          i32.load
+          local.set $p1
+          global.get $__stack_pointer
+          i32.const 16
+          i32.sub
+          local.tee $l15
+          global.set $__stack_pointer
+          local.get $l15
+          local.get $p1
+          i32.store offset=8
           global.get $__memory_base
-          local.tee $p1
-          i32.const 102
+          i32.const 1544
           i32.add
-          local.set $l13
+          i32.load
+          i64.load16_u offset=76
+          call $prlrt::burn_gas_unsigned_long_long_
+          global.get $__stack_pointer
+          i32.const 16
+          i32.sub
+          local.tee $l16
+          global.set $__stack_pointer
+          global.get $__stack_pointer
+          i32.const 32
+          i32.sub
+          local.tee $l17
+          global.set $__stack_pointer
+          global.get $__memory_base
+          i32.const 1544
+          i32.add
+          i32.load
+          i64.load16_u offset=14
+          call $prlrt::burn_gas_unsigned_long_long_
+          local.get $l15
+          i32.load offset=8
+          local.tee $p1
+          local.get $p0
+          i32.load offset=24
+          local.tee $p2
+          i32.const -1
+          i32.xor
+          i32.gt_u
+          if $I8
+            global.get $__memory_base
+            local.tee $p1
+            i32.const 98
+            i32.add
+            local.set $l13
+            local.get $l17
+            local.get $p1
+            i32.const 88
+            i32.add
+            call $std::__2::basic_string<char__std::__2::char_traits<char>__std::__2::allocator<char>>::basic_string<std::nullptr_t>_char_const*_
+            local.set $l4
+            local.get $l17
+            i32.const 16
+            i32.add
+            local.tee $l6
+            block $B9 (result i32)
+              local.get $l13
+              call $strlen
+              local.set $l7
+              global.get $__stack_pointer
+              i32.const 16
+              i32.sub
+              local.tee $l10
+              global.set $__stack_pointer
+              block $B10 (result i32)
+                local.get $l4
+                call $std::__2::basic_string<char__std::__2::char_traits<char>__std::__2::allocator<char>>::__is_long___const
+                if $I11
+                  local.get $l4
+                  i32.load offset=4
+                  br $B10
+                end
+                local.get $l4
+                i32.load8_u offset=11
+              end
+              local.tee $l9
+              i32.const 0
+              i32.ge_u
+              if $I12
+                block $B13
+                  local.get $l7
+                  local.get $l4
+                  call $std::__2::basic_string<char__std::__2::char_traits<char>__std::__2::allocator<char>>::__is_long___const
+                  if $I14 (result i32)
+                    local.get $l4
+                    call $std::__2::basic_string<char__std::__2::char_traits<char>__std::__2::allocator<char>>::__get_long_cap___const
+                    i32.const 1
+                    i32.sub
+                  else
+                    i32.const 10
+                  end
+                  local.tee $l14
+                  local.get $l9
+                  i32.sub
+                  i32.le_u
+                  if $I15
+                    local.get $l7
+                    i32.eqz
+                    br_if $B13
+                    local.get $l4
+                    call $std::__2::basic_string<char__std::__2::char_traits<char>__std::__2::allocator<char>>::__get_pointer___const
+                    local.tee $p2
+                    local.get $l9
+                    if $I16 (result i32)
+                      local.get $p2
+                      local.get $l7
+                      i32.add
+                      local.get $p2
+                      local.get $l9
+                      call $std::__2::char_traits<char>::move_char*__char_const*__unsigned_long_
+                      local.get $l13
+                      local.get $l7
+                      i32.const 0
+                      local.get $p2
+                      local.get $l9
+                      i32.add
+                      local.get $l13
+                      i32.gt_u
+                      select
+                      i32.const 0
+                      local.get $p2
+                      local.get $l13
+                      i32.le_u
+                      select
+                      i32.add
+                    else
+                      local.get $l13
+                    end
+                    local.get $l7
+                    call $std::__2::char_traits<char>::move_char*__char_const*__unsigned_long_
+                    local.get $l7
+                    local.get $l9
+                    i32.add
+                    local.set $p1
+                    block $B17
+                      local.get $l4
+                      call $std::__2::basic_string<char__std::__2::char_traits<char>__std::__2::allocator<char>>::__is_long___const
+                      if $I18
+                        local.get $l4
+                        local.get $p1
+                        call $std::__2::basic_string<char__std::__2::char_traits<char>__std::__2::allocator<char>>::__set_long_size_unsigned_long_
+                        br $B17
+                      end
+                      local.get $l4
+                      local.get $p1
+                      call $std::__2::basic_string<char__std::__2::char_traits<char>__std::__2::allocator<char>>::__set_short_size_unsigned_long_
+                    end
+                    local.get $l10
+                    i32.const 0
+                    i32.store8 offset=15
+                    local.get $p1
+                    local.get $p2
+                    i32.add
+                    local.get $l10
+                    i32.const 15
+                    i32.add
+                    call $std::__2::char_traits<char>::assign_char&__char_const&_
+                    br $B13
+                  end
+                  global.get $__stack_pointer
+                  i32.const 16
+                  i32.sub
+                  local.tee $l12
+                  global.set $__stack_pointer
+                  block $B19
+                    local.get $l7
+                    local.get $l9
+                    i32.add
+                    local.get $l14
+                    i32.sub
+                    local.tee $p1
+                    i32.const -17
+                    local.tee $p2
+                    local.get $l14
+                    i32.const -1
+                    i32.xor
+                    i32.add
+                    i32.le_u
+                    if $I20
+                      local.get $l4
+                      call $std::__2::basic_string<char__std::__2::char_traits<char>__std::__2::allocator<char>>::__get_pointer___const
+                      local.set $l5
+                      local.get $l14
+                      i32.const 2147483623
+                      i32.lt_u
+                      if $I21
+                        local.get $l12
+                        local.get $l14
+                        i32.const 1
+                        i32.shl
+                        i32.store offset=8
+                        local.get $l12
+                        local.get $p1
+                        local.get $l14
+                        i32.add
+                        i32.store offset=12
+                        global.get $__stack_pointer
+                        i32.const 16
+                        i32.sub
+                        local.tee $l11
+                        global.set $__stack_pointer
+                        local.get $l12
+                        i32.const 12
+                        i32.add
+                        local.tee $p3
+                        i32.load
+                        local.get $l12
+                        i32.const 8
+                        i32.add
+                        local.tee $p2
+                        i32.load
+                        i32.lt_u
+                        local.set $p1
+                        local.get $l11
+                        i32.const 16
+                        i32.add
+                        global.set $__stack_pointer
+                        local.get $p2
+                        local.get $p3
+                        local.get $p1
+                        select
+                        i32.load
+                        call $std::__2::basic_string<char__std::__2::char_traits<char>__std::__2::allocator<char>>::__recommend_unsigned_long_
+                        i32.const 1
+                        i32.add
+                        local.set $p2
+                      end
+                      local.get $p2
+                      call $operator_new_unsigned_long_
+                      local.set $p3
+                      local.get $l7
+                      if $I22
+                        local.get $p3
+                        local.get $l13
+                        local.get $l7
+                        call $std::__2::char_traits<char>::copy_char*__char_const*__unsigned_long_
+                      end
+                      local.get $l9
+                      if $I23
+                        local.get $p3
+                        local.get $l7
+                        i32.add
+                        local.get $l5
+                        local.get $l9
+                        call $std::__2::char_traits<char>::copy_char*__char_const*__unsigned_long_
+                      end
+                      local.get $l14
+                      i32.const 10
+                      i32.ne
+                      if $I24
+                        local.get $l5
+                        call $free
+                      end
+                      local.get $l4
+                      local.get $p3
+                      call $std::__2::basic_string<char__std::__2::char_traits<char>__std::__2::allocator<char>>::__set_long_pointer_char*_
+                      local.get $l4
+                      local.get $p2
+                      call $std::__2::basic_string<char__std::__2::char_traits<char>__std::__2::allocator<char>>::__set_long_cap_unsigned_long_
+                      local.get $l4
+                      local.get $l7
+                      local.get $l9
+                      i32.add
+                      local.tee $p1
+                      call $std::__2::basic_string<char__std::__2::char_traits<char>__std::__2::allocator<char>>::__set_long_size_unsigned_long_
+                      local.get $l12
+                      i32.const 0
+                      i32.store8 offset=7
+                      local.get $p1
+                      local.get $p3
+                      i32.add
+                      local.get $l12
+                      i32.const 7
+                      i32.add
+                      call $std::__2::char_traits<char>::assign_char&__char_const&_
+                      local.get $l12
+                      i32.const 16
+                      i32.add
+                      global.set $__stack_pointer
+                      br $B19
+                    end
+                    call $std::__2::basic_string<char__std::__2::char_traits<char>__std::__2::allocator<char>>::__throw_length_error___const
+                    unreachable
+                  end
+                end
+                local.get $l10
+                i32.const 16
+                i32.add
+                global.set $__stack_pointer
+                local.get $l4
+                br $B9
+              end
+              call $abort
+              unreachable
+            end
+            local.tee $p2
+            i64.load align=4
+            i64.store align=4
+            local.get $l6
+            local.get $p2
+            i32.load offset=8
+            i32.store offset=8
+            i32.const 0
+            local.set $p1
+            loop $L25
+              local.get $p1
+              i32.const 3
+              i32.ne
+              if $I26
+                local.get $p2
+                local.get $p1
+                i32.const 2
+                i32.shl
+                i32.add
+                i32.const 0
+                i32.store
+                local.get $p1
+                i32.const 1
+                i32.add
+                local.set $p1
+                br $L25
+              end
+            end
+            local.get $l6
+            i32.const 1
+            call $prlrt::gcl_exception::throw_exception_std::__2::basic_string<char__std::__2::char_traits<char>__std::__2::allocator<char>>_const&__prlrt::ExceptionType_
+            local.get $l6
+            call $std::__2::basic_string<char__std::__2::char_traits<char>__std::__2::allocator<char>>::~basic_string__
+            local.get $l4
+            call $std::__2::basic_string<char__std::__2::char_traits<char>__std::__2::allocator<char>>::~basic_string__
+            local.get $p0
+            i32.load offset=24
+            local.set $p2
+            local.get $l15
+            i32.load offset=8
+            local.set $p1
+          end
+          local.get $l17
+          i32.const 32
+          i32.add
+          global.set $__stack_pointer
           local.get $l16
           local.get $p1
-          call $std::__2::basic_string<char__std::__2::char_traits<char>__std::__2::allocator<char>>::basic_string<std::nullptr_t>_char_const*_
-          local.set $l4
+          local.get $p2
+          i32.add
+          i32.store offset=8
+          global.get $__memory_base
+          i32.const 1544
+          i32.add
+          i32.load
+          i64.load16_u offset=10
+          call $prlrt::burn_gas_unsigned_long_long_
+          local.get $p0
+          local.get $l16
+          i32.load offset=8
+          i32.store offset=24
           local.get $l16
           i32.const 16
           i32.add
-          local.tee $l17
-          block $B8 (result i32)
-            local.get $l13
-            call $strlen
-            local.set $l7
-            global.get $__stack_pointer
-            i32.const 16
-            i32.sub
-            local.tee $l6
-            global.set $__stack_pointer
-            block $B9 (result i32)
-              local.get $l4
-              call $std::__2::basic_string<char__std::__2::char_traits<char>__std::__2::allocator<char>>::__is_long___const
-              if $I10
-                local.get $l4
-                i32.load offset=4
-                br $B9
-              end
-              local.get $l4
-              i32.load8_u offset=11
-            end
-            local.tee $l8
-            i32.const 0
-            i32.ge_u
-            if $I11
-              block $B12
-                local.get $l7
-                local.get $l4
-                call $std::__2::basic_string<char__std::__2::char_traits<char>__std::__2::allocator<char>>::__is_long___const
-                if $I13 (result i32)
-                  local.get $l4
-                  call $std::__2::basic_string<char__std::__2::char_traits<char>__std::__2::allocator<char>>::__get_long_cap___const
-                  i32.const 1
-                  i32.sub
-                else
-                  i32.const 10
-                end
-                local.tee $l14
-                local.get $l8
-                i32.sub
-                i32.le_u
-                if $I14
-                  local.get $l7
-                  i32.eqz
-                  br_if $B12
-                  local.get $l4
-                  call $std::__2::basic_string<char__std::__2::char_traits<char>__std::__2::allocator<char>>::__get_pointer___const
-                  local.tee $p2
-                  local.get $l8
-                  if $I15 (result i32)
-                    local.get $p2
-                    local.get $l7
-                    i32.add
-                    local.get $p2
-                    local.get $l8
-                    call $std::__2::char_traits<char>::move_char*__char_const*__unsigned_long_
-                    local.get $l13
-                    local.get $l7
-                    i32.const 0
-                    local.get $p2
-                    local.get $l8
-                    i32.add
-                    local.get $l13
-                    i32.gt_u
-                    select
-                    i32.const 0
-                    local.get $p2
-                    local.get $l13
-                    i32.le_u
-                    select
-                    i32.add
-                  else
-                    local.get $l13
-                  end
-                  local.get $l7
-                  call $std::__2::char_traits<char>::move_char*__char_const*__unsigned_long_
-                  local.get $l7
-                  local.get $l8
-                  i32.add
-                  local.set $p1
-                  block $B16
-                    local.get $l4
-                    call $std::__2::basic_string<char__std::__2::char_traits<char>__std::__2::allocator<char>>::__is_long___const
-                    if $I17
-                      local.get $l4
-                      local.get $p1
-                      call $std::__2::basic_string<char__std::__2::char_traits<char>__std::__2::allocator<char>>::__set_long_size_unsigned_long_
-                      br $B16
-                    end
-                    local.get $l4
-                    local.get $p1
-                    call $std::__2::basic_string<char__std::__2::char_traits<char>__std::__2::allocator<char>>::__set_short_size_unsigned_long_
-                  end
-                  local.get $l6
-                  i32.const 0
-                  i32.store8 offset=15
-                  local.get $p1
-                  local.get $p2
-                  i32.add
-                  local.get $l6
-                  i32.const 15
-                  i32.add
-                  call $std::__2::char_traits<char>::assign_char&__char_const&_
-                  br $B12
-                end
-                global.get $__stack_pointer
-                i32.const 16
-                i32.sub
-                local.tee $l12
-                global.set $__stack_pointer
-                block $B18
-                  local.get $l7
-                  local.get $l8
-                  i32.add
-                  local.get $l14
-                  i32.sub
-                  local.tee $p1
-                  i32.const -17
-                  local.tee $p2
-                  local.get $l14
-                  i32.const -1
-                  i32.xor
-                  i32.add
-                  i32.le_u
-                  if $I19
-                    local.get $l4
-                    call $std::__2::basic_string<char__std::__2::char_traits<char>__std::__2::allocator<char>>::__get_pointer___const
-                    local.set $l5
-                    local.get $l14
-                    i32.const 2147483623
-                    i32.lt_u
-                    if $I20
-                      local.get $l12
-                      local.get $l14
-                      i32.const 1
-                      i32.shl
-                      i32.store offset=8
-                      local.get $l12
-                      local.get $p1
-                      local.get $l14
-                      i32.add
-                      i32.store offset=12
-                      global.get $__stack_pointer
-                      i32.const 16
-                      i32.sub
-                      local.tee $l10
-                      global.set $__stack_pointer
-                      local.get $l12
-                      i32.const 12
-                      i32.add
-                      local.tee $p3
-                      i32.load
-                      local.get $l12
-                      i32.const 8
-                      i32.add
-                      local.tee $p2
-                      i32.load
-                      i32.lt_u
-                      local.set $p1
-                      local.get $l10
-                      i32.const 16
-                      i32.add
-                      global.set $__stack_pointer
-                      local.get $p2
-                      local.get $p3
-                      local.get $p1
-                      select
-                      i32.load
-                      call $std::__2::basic_string<char__std::__2::char_traits<char>__std::__2::allocator<char>>::__recommend_unsigned_long_
-                      i32.const 1
-                      i32.add
-                      local.set $p2
-                    end
-                    local.get $p2
-                    call $operator_new_unsigned_long_
-                    local.set $p3
-                    local.get $l7
-                    if $I21
-                      local.get $p3
-                      local.get $l13
-                      local.get $l7
-                      call $std::__2::char_traits<char>::copy_char*__char_const*__unsigned_long_
-                    end
-                    local.get $l8
-                    if $I22
-                      local.get $p3
-                      local.get $l7
-                      i32.add
-                      local.get $l5
-                      local.get $l8
-                      call $std::__2::char_traits<char>::copy_char*__char_const*__unsigned_long_
-                    end
-                    local.get $l14
-                    i32.const 10
-                    i32.ne
-                    if $I23
-                      local.get $l5
-                      call $free
-                    end
-                    local.get $l4
-                    local.get $p3
-                    call $std::__2::basic_string<char__std::__2::char_traits<char>__std::__2::allocator<char>>::__set_long_pointer_char*_
-                    local.get $l4
-                    local.get $p2
-                    call $std::__2::basic_string<char__std::__2::char_traits<char>__std::__2::allocator<char>>::__set_long_cap_unsigned_long_
-                    local.get $l4
-                    local.get $l7
-                    local.get $l8
-                    i32.add
-                    local.tee $p1
-                    call $std::__2::basic_string<char__std::__2::char_traits<char>__std::__2::allocator<char>>::__set_long_size_unsigned_long_
-                    local.get $l12
-                    i32.const 0
-                    i32.store8 offset=7
-                    local.get $p1
-                    local.get $p3
-                    i32.add
-                    local.get $l12
-                    i32.const 7
-                    i32.add
-                    call $std::__2::char_traits<char>::assign_char&__char_const&_
-                    local.get $l12
-                    i32.const 16
-                    i32.add
-                    global.set $__stack_pointer
-                    br $B18
-                  end
-                  call $std::__2::basic_string<char__std::__2::char_traits<char>__std::__2::allocator<char>>::__throw_length_error___const
-                  unreachable
-                end
-              end
-              local.get $l6
-              i32.const 16
-              i32.add
-              global.set $__stack_pointer
-              local.get $l4
-              br $B8
-            end
-            call $abort
-            unreachable
-          end
-          local.tee $p2
-          i64.load align=4
-          i64.store align=4
-          local.get $l17
-          local.get $p2
-          i32.load offset=8
-          i32.store offset=8
-          i32.const 0
-          local.set $p1
-          loop $L24
-            local.get $p1
-            i32.const 3
-            i32.ne
-            if $I25
-              local.get $p2
-              local.get $p1
-              i32.const 2
-              i32.shl
-              i32.add
-              i32.const 0
-              i32.store
-              local.get $p1
-              i32.const 1
-              i32.add
-              local.set $p1
-              br $L24
-            end
-          end
-          local.get $l17
-          i32.const 19
-          call $prlrt::gcl_exception::throw_exception_std::__2::basic_string<char__std::__2::char_traits<char>__std::__2::allocator<char>>_const&__prlrt::ExceptionType_
-          local.get $l17
-          call $std::__2::basic_string<char__std::__2::char_traits<char>__std::__2::allocator<char>>::~basic_string__
-          local.get $l4
-          call $std::__2::basic_string<char__std::__2::char_traits<char>__std::__2::allocator<char>>::~basic_string__
+          global.set $__stack_pointer
+          local.get $l15
+          i32.const 16
+          i32.add
+          global.set $__stack_pointer
+          br $B6
         end
-        local.get $l16
-        i32.const 32
-        i32.add
-        global.set $__stack_pointer
-        local.get $l15
-        i64.load
-        call $GCLReleaseBigint
+        local.get $p0
+        i32.eqz
+        local.get $p1
+        i32.or
+        i32.eqz
+        br_if $B6
+        i32.const 2
         i32.const 0
-        local.set $p2
+        local.get $p1
+        select
+        br $B5
       end
-      local.get $l11
-      i64.load
-      call $GCLReleaseBigint
-      i32.const 2
-      i32.const 0
-      local.get $p2
-      select
-      local.get $p0
-      i32.eqz
-      local.get $p2
-      i32.or
-      br_if $B5
-      drop
       global.get $__stack_pointer
       i32.const 16
       i32.sub
@@ -1619,7 +1620,7 @@
       local.get $l4
       i32.const 0
       i32.store offset=12
-      block $B26
+      block $B27
         local.get $l4
         i32.load offset=12
         local.tee $p2
@@ -1627,7 +1628,7 @@
         i32.load offset=20
         local.tee $p1
         i32.ge_u
-        if $I27
+        if $I28
           local.get $l5
           i32.load offset=4
           local.get $l5
@@ -1642,17 +1643,17 @@
           i32.sub
           local.tee $p1
           i32.lt_u
-          if $I28
+          if $I29
             global.get $__stack_pointer
             i32.const 32
             i32.sub
             local.tee $p2
             global.set $__stack_pointer
-            block $B29
+            block $B30
               local.get $p1
               local.get $p3
               i32.sub
-              local.tee $l10
+              local.tee $l11
               local.get $l5
               i32.load offset=8
               local.get $l5
@@ -1662,20 +1663,20 @@
               i32.const 3
               i32.shr_s
               i32.le_u
-              if $I30
+              if $I31
                 local.get $l5
                 i32.load offset=4
                 local.tee $p1
-                local.get $l10
+                local.get $l11
                 i32.const 3
                 i32.shl
                 i32.add
                 local.set $p0
-                loop $L31
+                loop $L32
                   local.get $p0
                   local.get $p1
                   i32.eq
-                  if $I32
+                  if $I33
                     local.get $l5
                     local.get $p0
                     i32.store offset=4
@@ -1685,10 +1686,10 @@
                     i32.const 8
                     i32.add
                     local.set $p1
-                    br $L31
+                    br $L32
                   end
                 end
-                br $B29
+                br $B30
               end
               local.get $p2
               i32.const 8
@@ -1700,7 +1701,7 @@
               i32.sub
               i32.const 3
               i32.shr_s
-              local.get $l10
+              local.get $l11
               i32.add
               call $std::__2::vector<prlrt::__prlt_token__std::__2::allocator<prlrt::__prlt_token>>::__recommend_unsigned_long__const
               local.get $l5
@@ -1717,22 +1718,22 @@
               local.tee $p3
               i32.load offset=8
               local.tee $p1
-              local.get $l10
+              local.get $l11
               i32.const 3
               i32.shl
               i32.add
               local.set $p0
-              loop $L33
+              loop $L34
                 local.get $p0
                 local.get $p1
                 i32.ne
-                if $I34
+                if $I35
                   local.get $p1
                   call $prlrt::__prlt_token::__prlt_token__
                   i32.const 8
                   i32.add
                   local.set $p1
-                  br $L33
+                  br $L34
                 end
               end
               local.get $p3
@@ -1748,12 +1749,12 @@
             i32.const 32
             i32.add
             global.set $__stack_pointer
-            br $B26
+            br $B27
           end
           local.get $p1
           local.get $p3
           i32.lt_u
-          if $I35
+          if $I36
             local.get $l5
             local.get $p0
             local.get $p1
@@ -1762,7 +1763,7 @@
             i32.add
             call $std::__2::vector<prlrt::__prlt_token__std::__2::allocator<prlrt::__prlt_token>>::__base_destruct_at_end_prlrt::__prlt_token*_
           end
-          br $B26
+          br $B27
         end
         local.get $l5
         local.get $p2
@@ -1775,56 +1776,52 @@
       i32.const 0
     end
     local.set $p0
-    local.get $l9
-    i32.const 48
+    local.get $l8
+    i32.const 16
     i32.add
     global.set $__stack_pointer
     local.get $p0)
-  (func $prlrt::__prlt_bigint::map_from_serialized_data_unsigned_char*&__unsigned_int&__bool_ (type $t8) (param $p0 i32) (param $p1 i32) (param $p2 i32) (result i32)
+  (func $prlrt::____uint<unsigned_int>::map_from_serialized_data_unsigned_char*&__unsigned_int&__bool_ (type $t8) (param $p0 i32) (param $p1 i32) (param $p2 i32) (result i32)
     (local $l3 i32) (local $l4 i32)
-    local.get $p0
-    i64.load
-    local.get $p1
-    i32.load
     local.get $p2
     i32.load
-    call $GCLBigintInitFromEmbedded
-    local.set $l3
-    global.get $__memory_base
-    i32.const 1552
-    i32.add
-    i32.load
-    local.tee $l4
-    i64.load16_u offset=74
-    local.get $l3
-    i64.extend_i32_u
-    i64.mul
-    local.get $l4
-    i64.load16_u offset=72
-    i64.add
-    call $prlrt::burn_gas_unsigned_long_long_
-    local.get $l3
+    local.tee $l3
+    i32.const 4
+    i32.ge_u
     if $I0
-      local.get $p1
-      local.get $p1
-      i32.load
-      local.get $l3
+      global.get $__memory_base
+      i32.const 1544
       i32.add
-      local.tee $p1
-      i32.store
-      local.get $p2
-      local.get $p2
       i32.load
-      local.get $l3
-      i32.sub
-      i32.store
+      local.tee $l4
+      i64.load16_u offset=74
+      i64.const 2
+      i64.shl
+      local.get $l4
+      i64.load16_u offset=72
+      i64.add
+      call $prlrt::burn_gas_unsigned_long_long_
       local.get $p0
       local.get $p1
-      i32.store offset=8
+      i32.load
+      local.tee $p0
+      i32.load
+      i32.store
+      local.get $p1
+      local.get $p0
+      i32.const 4
+      i32.add
+      i32.store
+      local.get $p2
+      local.get $p2
+      i32.load
+      i32.const 4
+      i32.sub
+      i32.store
     end
     local.get $l3
-    i32.const 0
-    i32.ne)
+    i32.const 3
+    i32.gt_u)
   (func $std::__2::shared_ptr<prlrt::____token_impl>::~shared_ptr__ (type $t0) (param $p0 i32) (result i32)
     (local $l1 i32) (local $l2 i32)
     local.get $p0
@@ -1868,12 +1865,12 @@
       end
     end
     local.get $p0)
-  (func $Contract_chsimu_Token_6_ContractCallEntry (type $t11) (param $p0 i32) (param $p1 i32) (param $p2 i32) (param $p3 i32) (result i32)
+  (func $Contract_chsimu_Token_6_ContractCallEntry (type $t10) (param $p0 i32) (param $p1 i32) (param $p2 i32) (param $p3 i32) (result i32)
     i32.const 4099)
-  (func $Contract_chsimu_Token_6_CreateInstance (type $t20) (param $p0 i32) (param $p1 i64) (param $p2 i32) (param $p3 i32) (param $p4 i64) (result i32)
+  (func $Contract_chsimu_Token_6_CreateInstance (type $t18) (param $p0 i32) (param $p1 i64) (param $p2 i32) (param $p3 i32) (param $p4 i64) (result i32)
     (local $l5 i32)
     global.get $__memory_base
-    i32.const 1544
+    i32.const 1536
     i32.add
     local.get $p4
     i64.store
@@ -1883,11 +1880,11 @@
     i32.eqz
     if $I0
       global.get $__memory_base
-      i32.const 1556
+      i32.const 1548
       i32.add
       local.get $p0
       i32.store
-      i32.const 40
+      i32.const 32
       call $operator_new_unsigned_long_
       local.tee $p2
       i64.const 0
@@ -1914,7 +1911,7 @@
       i32.store offset=12
       local.get $p3
       global.get $__memory_base
-      i32.const 1092
+      i32.const 1084
       i32.add
       i32.store
       local.get $p3
@@ -1942,10 +1939,8 @@
       i32.add
       global.set $__stack_pointer
       local.get $p2
-      i32.const 24
-      i32.add
-      call $prlrt::__prlt_bigint::__prlt_bigint_long_long_
-      drop
+      i32.const 0
+      i32.store offset=24
       local.get $p2
       local.get $p1
       i64.store
@@ -1955,10 +1950,6 @@
     local.get $p0
     if $I0
       local.get $p0
-      i32.const 24
-      i32.add
-      call $prlrt::__prlt_bigint::~__prlt_bigint__
-      local.get $p0
       i32.const 12
       i32.add
       call $std::__2::shared_ptr<prlrt::____token_impl>::~shared_ptr__
@@ -1966,7 +1957,7 @@
     end
     local.get $p0
     call $free)
-  (func $Contract_chsimu_Token_6_MapContractContextToInstance (type $t11) (param $p0 i32) (param $p1 i32) (param $p2 i32) (param $p3 i32) (result i32)
+  (func $Contract_chsimu_Token_6_MapContractContextToInstance (type $t10) (param $p0 i32) (param $p1 i32) (param $p2 i32) (param $p3 i32) (result i32)
     (local $l4 i32) (local $l5 i32) (local $l6 i32) (local $l7 i32) (local $l8 i32) (local $l9 i32)
     global.get $__stack_pointer
     i32.const 16
@@ -2072,7 +2063,7 @@
         local.get $l4
         i32.const 8
         i32.add
-        call $prlrt::__prlt_bigint::map_from_serialized_data_unsigned_char*&__unsigned_int&__bool_
+        call $prlrt::____uint<unsigned_int>::map_from_serialized_data_unsigned_char*&__unsigned_int&__bool_
         i32.eqz
         br_if $B0
         local.get $l4
@@ -2099,22 +2090,20 @@
       local.get $p0
       i32.const 24
       i32.add
-      call $prlrt::__prlt_bigint::get_serialize_size___const
+      call $prlrt::____uint<unsigned_int>::get_serialize_size___const
       i32.const 8
       i32.add
     else
       i32.const 0
     end)
-  (func $prlrt::__prlt_bigint::get_serialize_size___const (type $t0) (param $p0 i32) (result i32)
+  (func $prlrt::____uint<unsigned_int>::get_serialize_size___const (type $t0) (param $p0 i32) (result i32)
     global.get $__memory_base
-    i32.const 1552
+    i32.const 1544
     i32.add
     i32.load
     i64.load16_u offset=68
     call $prlrt::burn_gas_unsigned_long_long_
-    local.get $p0
-    i64.load
-    call $GCLBigintGetEmbeddedSize)
+    i32.const 4)
   (func $Contract_chsimu_Token_6_SerializeOutContractContext (type $t8) (param $p0 i32) (param $p1 i32) (param $p2 i32) (result i32)
     (local $l3 i32)
     i32.const 5
@@ -2142,33 +2131,30 @@
         i32.const 24
         i32.add
         local.tee $p0
-        call $prlrt::__prlt_bigint::get_serialize_size___const
+        call $prlrt::____uint<unsigned_int>::get_serialize_size___const
         local.set $p1
         global.get $__memory_base
-        i32.const 1552
+        i32.const 1544
         i32.add
         i32.load
         local.tee $l3
-        i64.load16_u offset=70
-        local.get $l3
         i64.load16_u offset=74
-        local.get $p0
-        i64.load
-        call $GCLBigintGetEmbeddedSize
-        i64.extend_i32_u
-        i64.mul
+        i64.const 2
+        i64.shl
+        local.get $l3
+        i64.load16_u offset=70
         i64.add
         call $prlrt::burn_gas_unsigned_long_long_
-        local.get $p0
-        i64.load
         local.get $p2
         i32.const 8
         i32.add
-        local.tee $p0
-        call $GCLBigintEmbed
-        local.get $p2
+        local.tee $l3
         local.get $p0
+        i32.load
+        i32.store
+        local.get $p2
         local.get $p1
+        local.get $l3
         i32.add
         local.get $p2
         i32.sub
@@ -2182,19 +2168,19 @@
     local.get $l3)
   (func $Contract_chsimu_Token_6_InitGasTable (type $t3) (param $p0 i32) (param $p1 i32) (result i32)
     global.get $__memory_base
-    i32.const 1552
+    i32.const 1544
     i32.add
     local.get $p0
     i32.store
     i32.const 0)
-  (func $Contract_chsimu_Token_6_GetRemainingGas (type $t15) (result i64)
+  (func $Contract_chsimu_Token_6_GetRemainingGas (type $t13) (result i64)
     global.get $__memory_base
-    i32.const 1544
+    i32.const 1536
     i32.add
     i64.load)
-  (func $Contract_chsimu_Token_6_SetRemainingGas (type $t13) (param $p0 i64) (result i32)
+  (func $Contract_chsimu_Token_6_SetRemainingGas (type $t15) (param $p0 i64) (result i32)
     global.get $__memory_base
-    i32.const 1544
+    i32.const 1536
     i32.add
     local.get $p0
     i64.store
@@ -2211,7 +2197,7 @@
     i32.load offset=12
     call $std::__2::default_delete<prlrt::____token_impl>::operator___prlrt::____token_impl*__const)
   (func $std::__2::default_delete<prlrt::____token_impl>::operator___prlrt::____token_impl*__const (type $t1) (param $p0 i32)
-    (local $l1 i32) (local $l2 i32) (local $l3 i32)
+    (local $l1 i32) (local $l2 i32) (local $l3 i32) (local $l4 i32) (local $l5 i32)
     local.get $p0
     if $I0
       global.get $__stack_pointer
@@ -2227,7 +2213,7 @@
         call $prlrt::__prlt_bigint::__prlt_bigint_long_long_
         local.set $l1
         global.get $__memory_base
-        i32.const 1552
+        i32.const 1544
         i32.add
         i32.load
         i64.load16_u offset=24
@@ -2235,8 +2221,15 @@
         i32.const 8
         i32.add
         local.tee $l2
+        call $prlrt::__prlt_bigint::gas_coefficient___const
+        local.tee $l4
         local.get $l1
-        call $prlrt::__prlt_bigint::bigger_gas_coefficient_prlrt::__prlt_bigint_const&__const
+        call $prlrt::__prlt_bigint::gas_coefficient___const
+        local.tee $l5
+        local.get $l4
+        local.get $l5
+        i32.gt_u
+        select
         i64.extend_i32_u
         i64.mul
         call $prlrt::burn_gas_unsigned_long_long_
@@ -2261,9 +2254,8 @@
         call $GCLReportOrphanToken
       end
       local.get $p0
-      i32.const 8
-      i32.add
-      call $prlrt::__prlt_bigint::~__prlt_bigint__
+      i64.load offset=8
+      call $GCLReleaseBigint
       local.get $l3
       i32.const 16
       i32.add
@@ -2279,20 +2271,9 @@
     local.get $p1
     i32.load offset=4
     global.get $__memory_base
-    i32.const 281
+    i32.const 270
     i32.add
     i32.eq
-    select)
-  (func $prlrt::__prlt_bigint::bigger_gas_coefficient_prlrt::__prlt_bigint_const&__const (type $t3) (param $p0 i32) (param $p1 i32) (result i32)
-    local.get $p0
-    call $prlrt::__prlt_bigint::gas_coefficient___const
-    local.tee $p0
-    local.get $p1
-    call $prlrt::__prlt_bigint::gas_coefficient___const
-    local.tee $p1
-    local.get $p0
-    local.get $p1
-    i32.gt_u
     select)
   (func $prlrt::__prlt_token::__prlt_token_prlrt::__prlt_token_const&_ (type $t3) (param $p0 i32) (param $p1 i32) (result i32)
     (local $l2 i32) (local $l3 i32)
@@ -2357,7 +2338,7 @@
     i32.ge_u
     if $I0
       global.get $__memory_base
-      i32.const 31
+      i32.const 17
       i32.add
       call $std::__2::__throw_length_error_char_const*_
       unreachable
@@ -2381,7 +2362,7 @@
     i32.const 2147483640
     i32.ge_u
     select)
-  (func $std::__2::__split_buffer<prlrt::__prlt_token__std::__2::allocator<prlrt::__prlt_token>&>::__split_buffer_unsigned_long__unsigned_long__std::__2::allocator<prlrt::__prlt_token>&_ (type $t11) (param $p0 i32) (param $p1 i32) (param $p2 i32) (param $p3 i32) (result i32)
+  (func $std::__2::__split_buffer<prlrt::__prlt_token__std::__2::allocator<prlrt::__prlt_token>&>::__split_buffer_unsigned_long__unsigned_long__std::__2::allocator<prlrt::__prlt_token>&_ (type $t10) (param $p0 i32) (param $p1 i32) (param $p2 i32) (param $p3 i32) (result i32)
     (local $l4 i32)
     local.get $p0
     i32.const 0
@@ -2658,7 +2639,7 @@
     local.get $p1
     i32.load offset=4
     global.get $__memory_base
-    i32.const 521
+    i32.const 510
     i32.add
     i32.eq
     select)
@@ -2691,12 +2672,12 @@
   (func $__cxa_throw (type $t1) (param $p0 i32)
     call $abort
     unreachable)
-  (func $__cxa_allocate_exception (type $t10) (result i32)
+  (func $__cxa_allocate_exception (type $t9) (result i32)
     call $abort
     unreachable)
-  (func $__errno_location (type $t10) (result i32)
+  (func $__errno_location (type $t9) (result i32)
     global.get $__memory_base
-    i32.const 1560
+    i32.const 1552
     i32.add)
   (func $strlen (type $t0) (param $p0 i32) (result i32)
     (local $l1 i32) (local $l2 i32) (local $l3 i32)
@@ -2866,7 +2847,7 @@
     i32.load8_u offset=11
     i32.const 7
     i32.shr_u)
-  (func $std::__2::char_traits<char>::move_char*__char_const*__unsigned_long_ (type $t12) (param $p0 i32) (param $p1 i32) (param $p2 i32)
+  (func $std::__2::char_traits<char>::move_char*__char_const*__unsigned_long_ (type $t11) (param $p0 i32) (param $p1 i32) (param $p2 i32)
     local.get $p2
     if $I0
       block $B1
@@ -2945,7 +2926,7 @@
     end)
   (func $std::__2::basic_string<char__std::__2::char_traits<char>__std::__2::allocator<char>>::__invalidate_all_iterators__ (type $t1) (param $p0 i32)
     nop)
-  (func $std::__2::char_traits<char>::copy_char*__char_const*__unsigned_long_ (type $t12) (param $p0 i32) (param $p1 i32) (param $p2 i32)
+  (func $std::__2::char_traits<char>::copy_char*__char_const*__unsigned_long_ (type $t11) (param $p0 i32) (param $p1 i32) (param $p2 i32)
     local.get $p2
     if $I0
       local.get $p0
@@ -2970,7 +2951,7 @@
     i32.store offset=4)
   (func $std::__2::basic_string<char__std::__2::char_traits<char>__std::__2::allocator<char>>::__throw_length_error___const (type $t7)
     global.get $__memory_base
-    i32.const 74
+    i32.const 60
     i32.add
     call $std::__2::__throw_length_error_char_const*_
     unreachable)
@@ -3284,7 +3265,7 @@
     i32.sub
     global.set $__stack_pointer
     local.get $p1)
-  (func $__cxxabiv1::__class_type_info::process_found_base_class___cxxabiv1::__dynamic_cast_info*__void*__int__const (type $t12) (param $p0 i32) (param $p1 i32) (param $p2 i32)
+  (func $__cxxabiv1::__class_type_info::process_found_base_class___cxxabiv1::__dynamic_cast_info*__void*__int__const (type $t11) (param $p0 i32) (param $p1 i32) (param $p2 i32)
     (local $l3 i32)
     local.get $p0
     i32.load offset=16
@@ -3547,7 +3528,7 @@
       i32.const 1
       i32.store8 offset=54
     end)
-  (func $__cxxabiv1::__class_type_info::process_static_type_below_dst___cxxabiv1::__dynamic_cast_info*__void_const*__int__const (type $t12) (param $p0 i32) (param $p1 i32) (param $p2 i32)
+  (func $__cxxabiv1::__class_type_info::process_static_type_below_dst___cxxabiv1::__dynamic_cast_info*__void_const*__int__const (type $t11) (param $p0 i32) (param $p1 i32) (param $p2 i32)
     block $B0
       local.get $p0
       i32.load offset=4
@@ -4308,15 +4289,15 @@
     i32.ne)
   (func $std::exception::what___const (type $t0) (param $p0 i32) (result i32)
     global.get $__memory_base
-    i32.const 38
+    i32.const 24
     i32.add)
   (func $std::bad_alloc::what___const (type $t0) (param $p0 i32) (result i32)
     global.get $__memory_base
-    i32.const 87
+    i32.const 73
     i32.add)
   (func $std::bad_array_new_length::what___const (type $t0) (param $p0 i32) (result i32)
     global.get $__memory_base
-    i32.const 53
+    i32.const 39
     i32.add)
   (func $std::logic_error::~logic_error__ (type $t0) (param $p0 i32) (result i32)
     local.get $p0
@@ -4370,7 +4351,7 @@
     drop
     local.get $p0
     call $free)
-  (func $stackSave (type $t10) (result i32)
+  (func $stackSave (type $t9) (result i32)
     global.get $__stack_pointer)
   (func $stackRestore (type $t1) (param $p0 i32)
     local.get $p0
@@ -4400,21 +4381,21 @@
     end)
   (global $GOT.func.internal.std::runtime_error::~runtime_error__ (mut i32) (i32.const 0))
   (global $GOT.func.internal.std::length_error::~length_error__ (mut i32) (i32.const 1))
-  (global $GOT.data.internal.typeinfo_for_std::length_error (mut i32) (i32.const 1512))
-  (global $GOT.data.internal.vtable_for_std::length_error (mut i32) (i32.const 1492))
+  (global $GOT.data.internal.typeinfo_for_std::length_error (mut i32) (i32.const 1504))
+  (global $GOT.data.internal.vtable_for_std::length_error (mut i32) (i32.const 1484))
   (global $GOT.func.internal.std::bad_array_new_length::~bad_array_new_length__ (mut i32) (i32.const 2))
-  (global $GOT.data.internal.typeinfo_for_std::bad_array_new_length (mut i32) (i32.const 1428))
-  (global $GOT.data.internal.vtable_for_std::exception (mut i32) (i32.const 1388))
-  (global $GOT.data.internal.vtable_for_std::logic_error (mut i32) (i32.const 1440))
-  (global $GOT.data.internal.vtable_for_std::runtime_error (mut i32) (i32.const 1460))
-  (global $GOT.data.internal.__cxa_new_handler (mut i32) (i32.const 1564))
-  (global $GOT.data.internal.typeinfo_for___cxxabiv1::__class_type_info (mut i32) (i32.const 1168))
-  (global $GOT.data.internal.typeinfo_for___cxxabiv1::__shim_type_info (mut i32) (i32.const 1156))
-  (global $GOT.data.internal.typeinfo_for___cxxabiv1::__pointer_type_info (mut i32) (i32.const 1192))
-  (global $GOT.data.internal.vtable_for_std::bad_alloc (mut i32) (i32.const 1348))
-  (global $GOT.data.internal.vtable_for_std::bad_array_new_length (mut i32) (i32.const 1368))
-  (global $GOT.data.internal.__THREW__ (mut i32) (i32.const 1568))
-  (global $GOT.data.internal.__threwValue (mut i32) (i32.const 1572))
+  (global $GOT.data.internal.typeinfo_for_std::bad_array_new_length (mut i32) (i32.const 1420))
+  (global $GOT.data.internal.vtable_for_std::exception (mut i32) (i32.const 1380))
+  (global $GOT.data.internal.vtable_for_std::logic_error (mut i32) (i32.const 1432))
+  (global $GOT.data.internal.vtable_for_std::runtime_error (mut i32) (i32.const 1452))
+  (global $GOT.data.internal.__cxa_new_handler (mut i32) (i32.const 1556))
+  (global $GOT.data.internal.typeinfo_for___cxxabiv1::__class_type_info (mut i32) (i32.const 1160))
+  (global $GOT.data.internal.typeinfo_for___cxxabiv1::__shim_type_info (mut i32) (i32.const 1148))
+  (global $GOT.data.internal.typeinfo_for___cxxabiv1::__pointer_type_info (mut i32) (i32.const 1184))
+  (global $GOT.data.internal.vtable_for_std::bad_alloc (mut i32) (i32.const 1340))
+  (global $GOT.data.internal.vtable_for_std::bad_array_new_length (mut i32) (i32.const 1360))
+  (global $GOT.data.internal.__THREW__ (mut i32) (i32.const 1560))
+  (global $GOT.data.internal.__threwValue (mut i32) (i32.const 1564))
   (export "__wasm_apply_data_relocs" (func $__wasm_apply_data_relocs))
   (export "Contract_chsimu_Token_6_TransactionCallEntry" (func $Contract_chsimu_Token_6_TransactionCallEntry))
   (export "Contract_chsimu_Token_6_ContractCallEntry" (func $Contract_chsimu_Token_6_ContractCallEntry))
@@ -4436,4 +4417,4 @@
   (export "__cxa_is_pointer_type" (func $__cxa_is_pointer_type))
   (start $__wasm_apply_global_relocs)
   (elem $e0 (global.get $__table_base) func $std::runtime_error::~runtime_error__ $std::logic_error::~logic_error__ $std::__2::__shared_count::~__shared_count__ $prlrt::gcl_exception::~gcl_exception__ $std::logic_error::what___const $std::__2::__shared_count::~__shared_count__ $std::__2::__shared_ptr_pointer<prlrt::____token_impl*__std::__2::shared_ptr<prlrt::____token_impl>::__shared_ptr_default_delete<prlrt::____token_impl__prlrt::____token_impl>__std::__2::allocator<prlrt::____token_impl>>::~__shared_ptr_pointer__ $std::__2::__shared_ptr_pointer<prlrt::____token_impl*__std::__2::shared_ptr<prlrt::____token_impl>::__shared_ptr_default_delete<prlrt::____token_impl__prlrt::____token_impl>__std::__2::allocator<prlrt::____token_impl>>::__on_zero_shared__ $std::__2::__shared_ptr_pointer<prlrt::____token_impl*__std::__2::shared_ptr<prlrt::____token_impl>::__shared_ptr_default_delete<prlrt::____token_impl__prlrt::____token_impl>__std::__2::allocator<prlrt::____token_impl>>::__get_deleter_std::type_info_const&__const $std::__2::__shared_ptr_pointer<prlrt::____token_impl*__std::__2::shared_ptr<prlrt::____token_impl>::__shared_ptr_default_delete<prlrt::____token_impl__prlrt::____token_impl>__std::__2::allocator<prlrt::____token_impl>>::~__shared_ptr_pointer__ $std::__2::__shared_ptr_pointer<prlrt::____token_impl*__std::__2::shared_ptr<prlrt::____token_impl>::__shared_ptr_default_delete<prlrt::____token_impl__prlrt::____token_impl>__std::__2::allocator<prlrt::____token_impl>>::~__shared_ptr_pointer__ $std::__2::__shared_ptr_pointer<prlrt::____array_impl<prlrt::__prlt_token>*__std::__2::shared_ptr<prlrt::____array_impl<prlrt::__prlt_token>>::__shared_ptr_default_delete<prlrt::____array_impl<prlrt::__prlt_token>__prlrt::____array_impl<prlrt::__prlt_token>>__std::__2::allocator<prlrt::____array_impl<prlrt::__prlt_token>>>::__on_zero_shared__ $std::__2::__shared_ptr_pointer<prlrt::____array_impl<prlrt::__prlt_token>*__std::__2::shared_ptr<prlrt::____array_impl<prlrt::__prlt_token>>::__shared_ptr_default_delete<prlrt::____array_impl<prlrt::__prlt_token>__prlrt::____array_impl<prlrt::__prlt_token>>__std::__2::allocator<prlrt::____array_impl<prlrt::__prlt_token>>>::__get_deleter_std::type_info_const&__const $std::__2::__shared_ptr_pointer<prlrt::____token_impl*__std::__2::shared_ptr<prlrt::____token_impl>::__shared_ptr_default_delete<prlrt::____token_impl__prlrt::____token_impl>__std::__2::allocator<prlrt::____token_impl>>::~__shared_ptr_pointer__ $__wasm_call_ctors $std::__2::__shared_count::~__shared_count__ $std::__2::__shared_ptr_pointer<prlrt::____token_impl*__std::__2::shared_ptr<prlrt::____token_impl>::__shared_ptr_default_delete<prlrt::____token_impl__prlrt::____token_impl>__std::__2::allocator<prlrt::____token_impl>>::~__shared_ptr_pointer__ $std::__2::basic_string<char__std::__2::char_traits<char>__std::__2::allocator<char>>::__invalidate_all_iterators__ $std::__2::basic_string<char__std::__2::char_traits<char>__std::__2::allocator<char>>::__invalidate_all_iterators__ $__cxxabiv1::__class_type_info::can_catch___cxxabiv1::__shim_type_info_const*__void*&__const $__cxxabiv1::__class_type_info::search_above_dst___cxxabiv1::__dynamic_cast_info*__void_const*__void_const*__int__bool__const $__cxxabiv1::__class_type_info::search_below_dst___cxxabiv1::__dynamic_cast_info*__void_const*__int__bool__const $__cxxabiv1::__class_type_info::has_unambiguous_public_base___cxxabiv1::__dynamic_cast_info*__void*__int__const $std::__2::__shared_ptr_pointer<prlrt::____token_impl*__std::__2::shared_ptr<prlrt::____token_impl>::__shared_ptr_default_delete<prlrt::____token_impl__prlrt::____token_impl>__std::__2::allocator<prlrt::____token_impl>>::~__shared_ptr_pointer__ $__cxxabiv1::__si_class_type_info::search_above_dst___cxxabiv1::__dynamic_cast_info*__void_const*__void_const*__int__bool__const $__cxxabiv1::__si_class_type_info::search_below_dst___cxxabiv1::__dynamic_cast_info*__void_const*__int__bool__const $__cxxabiv1::__si_class_type_info::has_unambiguous_public_base___cxxabiv1::__dynamic_cast_info*__void*__int__const $std::__2::__shared_ptr_pointer<prlrt::____token_impl*__std::__2::shared_ptr<prlrt::____token_impl>::__shared_ptr_default_delete<prlrt::____token_impl__prlrt::____token_impl>__std::__2::allocator<prlrt::____token_impl>>::~__shared_ptr_pointer__ $__cxxabiv1::__vmi_class_type_info::search_above_dst___cxxabiv1::__dynamic_cast_info*__void_const*__void_const*__int__bool__const $__cxxabiv1::__vmi_class_type_info::search_below_dst___cxxabiv1::__dynamic_cast_info*__void_const*__int__bool__const $__cxxabiv1::__vmi_class_type_info::has_unambiguous_public_base___cxxabiv1::__dynamic_cast_info*__void*__int__const $std::__2::__shared_ptr_pointer<prlrt::____token_impl*__std::__2::shared_ptr<prlrt::____token_impl>::__shared_ptr_default_delete<prlrt::____token_impl__prlrt::____token_impl>__std::__2::allocator<prlrt::____token_impl>>::~__shared_ptr_pointer__ $std::bad_alloc::what___const $std::__2::__shared_ptr_pointer<prlrt::____token_impl*__std::__2::shared_ptr<prlrt::____token_impl>::__shared_ptr_default_delete<prlrt::____token_impl__prlrt::____token_impl>__std::__2::allocator<prlrt::____token_impl>>::~__shared_ptr_pointer__ $std::bad_array_new_length::what___const $std::__2::__shared_ptr_pointer<prlrt::____token_impl*__std::__2::shared_ptr<prlrt::____token_impl>::__shared_ptr_default_delete<prlrt::____token_impl__prlrt::____token_impl>__std::__2::allocator<prlrt::____token_impl>>::~__shared_ptr_pointer__ $std::exception::what___const $std::logic_error::~logic_error__.1 $std::logic_error::what___const $std::runtime_error::~runtime_error__.1 $std::logic_error::~logic_error__.1)
-  (data $.data (global.get $__memory_base) "test_overflow\00insufficient gas\00vector\00std::exception\00bad_array_new_length\00basic_string\00std::bad_alloc\00bigint overflow in \00N5prlrt13gcl_exceptionE\00NSt3__220__shared_ptr_pointerIPN5prlrt14____token_implENS_10shared_ptrIS2_E27__shared_ptr_default_deleteIS2_S2_EENS_9allocatorIS2_EEEE\00NSt3__210shared_ptrIN5prlrt14____token_implEE27__shared_ptr_default_deleteIS2_S2_EE\00NSt3__220__shared_ptr_pointerIPN5prlrt14____array_implINS1_12__prlt_tokenEEENS_10shared_ptrIS4_E27__shared_ptr_default_deleteIS4_S4_EENS_9allocatorIS4_EEEE\00NSt3__210shared_ptrIN5prlrt14____array_implINS1_12__prlt_tokenEEEE27__shared_ptr_default_deleteIS4_S4_EE\00NSt3__214__shared_countE\00NSt3__219__shared_weak_countE\00N10__cxxabiv116__shim_type_infoE\00N10__cxxabiv117__class_type_infoE\00N10__cxxabiv117__pbase_type_infoE\00N10__cxxabiv119__pointer_type_infoE\00N10__cxxabiv120__si_class_type_infoE\00N10__cxxabiv121__vmi_class_type_infoE\00St9exception\00St9bad_alloc\00St20bad_array_new_length\00St11logic_error\00St12length_error\00St13runtime_error\00St9type_info\00\01\00\00\00\e4\04\00\00z\00\00\00\f4\05\00\00\00\00\00\00\f4\03\00\00\00\00\00\00\03\00\00\00\04\00\00\00\00\00\00\000\04\00\00\05\00\00\00\06\00\00\00\07\00\00\00\08\00\00\00\09\00\00\00\e4\04\00\00\92\00\00\00l\04\00\00\00\00\00\00X\04\00\00\05\00\00\00\0a\00\00\00\0b\00\00\00\0c\00\00\00\0d\00\00\00\e4\04\00\00m\01\00\00l\04\00\00\bc\04\00\00r\02\00\00\18\05\00\00\8b\02\00\00\00\00\00\00\01\00\00\00d\04\00\00\00\00\00\00\e4\04\00\00\a9\02\00\00\00\06\00\00\e4\04\00\00\ca\02\00\00\84\04\00\00\e4\04\00\00\ec\02\00\00\84\04\00\00\e4\04\00\00\0e\03\00\00\9c\04\00\00\00\00\00\00\90\04\00\00\0f\00\00\00\10\00\00\00\11\00\00\00\12\00\00\00\13\00\00\00\14\00\00\00\15\00\00\00\16\00\00\00\00\00\00\00\04\05\00\00\0f\00\00\00\17\00\00\00\11\00\00\00\12\00\00\00\13\00\00\00\18\00\00\00\19\00\00\00\1a\00\00\00\e4\04\00\002\03\00\00\90\04\00\00\00\00\00\008\05\00\00\0f\00\00\00\1b\00\00\00\11\00\00\00\12\00\00\00\13\00\00\00\1c\00\00\00\1d\00\00\00\1e\00\00\00\e4\04\00\00W\03\00\00\90\04\00\00\00\00\00\00\88\05\00\00\02\00\00\00\1f\00\00\00 \00\00\00\00\00\00\00\94\05\00\00\02\00\00\00!\00\00\00\22\00\00\00\00\00\00\00\80\05\00\00\02\00\00\00#\00\00\00$\00\00\00\bc\04\00\00}\03\00\00\e4\04\00\00\8a\03\00\00\80\05\00\00\e4\04\00\00\97\03\00\00\88\05\00\00\00\00\00\00\c8\05\00\00\01\00\00\00%\00\00\00&\00\00\00\00\00\00\00\f4\05\00\00\00\00\00\00'\00\00\00\04\00\00\00\e4\04\00\00\b0\03\00\00\80\05\00\00\00\00\00\00\e8\05\00\00\01\00\00\00(\00\00\00&\00\00\00\e4\04\00\00\c0\03\00\00\c8\05\00\00\e4\04\00\00\d1\03\00\00\80\05\00\00\bc\04\00\00\e3\03\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00"))
+  (data $.data (global.get $__memory_base) "insufficient gas\00vector\00std::exception\00bad_array_new_length\00basic_string\00std::bad_alloc\00operator+\00overflow in \00N5prlrt13gcl_exceptionE\00NSt3__220__shared_ptr_pointerIPN5prlrt14____token_implENS_10shared_ptrIS2_E27__shared_ptr_default_deleteIS2_S2_EENS_9allocatorIS2_EEEE\00NSt3__210shared_ptrIN5prlrt14____token_implEE27__shared_ptr_default_deleteIS2_S2_EE\00NSt3__220__shared_ptr_pointerIPN5prlrt14____array_implINS1_12__prlt_tokenEEENS_10shared_ptrIS4_E27__shared_ptr_default_deleteIS4_S4_EENS_9allocatorIS4_EEEE\00NSt3__210shared_ptrIN5prlrt14____array_implINS1_12__prlt_tokenEEEE27__shared_ptr_default_deleteIS4_S4_EE\00NSt3__214__shared_countE\00NSt3__219__shared_weak_countE\00N10__cxxabiv116__shim_type_infoE\00N10__cxxabiv117__class_type_infoE\00N10__cxxabiv117__pbase_type_infoE\00N10__cxxabiv119__pointer_type_infoE\00N10__cxxabiv120__si_class_type_infoE\00N10__cxxabiv121__vmi_class_type_infoE\00St9exception\00St9bad_alloc\00St20bad_array_new_length\00St11logic_error\00St12length_error\00St13runtime_error\00St9type_info\00\00\00\00\01\00\00\00\dc\04\00\00o\00\00\00\ec\05\00\00\00\00\00\00\ec\03\00\00\00\00\00\00\03\00\00\00\04\00\00\00\00\00\00\00(\04\00\00\05\00\00\00\06\00\00\00\07\00\00\00\08\00\00\00\09\00\00\00\dc\04\00\00\87\00\00\00d\04\00\00\00\00\00\00P\04\00\00\05\00\00\00\0a\00\00\00\0b\00\00\00\0c\00\00\00\0d\00\00\00\dc\04\00\00b\01\00\00d\04\00\00\b4\04\00\00g\02\00\00\10\05\00\00\80\02\00\00\00\00\00\00\01\00\00\00\5c\04\00\00\00\00\00\00\dc\04\00\00\9e\02\00\00\f8\05\00\00\dc\04\00\00\bf\02\00\00|\04\00\00\dc\04\00\00\e1\02\00\00|\04\00\00\dc\04\00\00\03\03\00\00\94\04\00\00\00\00\00\00\88\04\00\00\0f\00\00\00\10\00\00\00\11\00\00\00\12\00\00\00\13\00\00\00\14\00\00\00\15\00\00\00\16\00\00\00\00\00\00\00\fc\04\00\00\0f\00\00\00\17\00\00\00\11\00\00\00\12\00\00\00\13\00\00\00\18\00\00\00\19\00\00\00\1a\00\00\00\dc\04\00\00'\03\00\00\88\04\00\00\00\00\00\000\05\00\00\0f\00\00\00\1b\00\00\00\11\00\00\00\12\00\00\00\13\00\00\00\1c\00\00\00\1d\00\00\00\1e\00\00\00\dc\04\00\00L\03\00\00\88\04\00\00\00\00\00\00\80\05\00\00\02\00\00\00\1f\00\00\00 \00\00\00\00\00\00\00\8c\05\00\00\02\00\00\00!\00\00\00\22\00\00\00\00\00\00\00x\05\00\00\02\00\00\00#\00\00\00$\00\00\00\b4\04\00\00r\03\00\00\dc\04\00\00\7f\03\00\00x\05\00\00\dc\04\00\00\8c\03\00\00\80\05\00\00\00\00\00\00\c0\05\00\00\01\00\00\00%\00\00\00&\00\00\00\00\00\00\00\ec\05\00\00\00\00\00\00'\00\00\00\04\00\00\00\dc\04\00\00\a5\03\00\00x\05\00\00\00\00\00\00\e0\05\00\00\01\00\00\00(\00\00\00&\00\00\00\dc\04\00\00\b5\03\00\00\c0\05\00\00\dc\04\00\00\c6\03\00\00x\05\00\00\b4\04\00\00\d8\03\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00\00"))
