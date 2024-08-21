@@ -1,0 +1,31 @@
+[
+    {
+        "contract": "Token",
+        "engine": "GCL_WASM",
+        "hash": "11wcy6ce8q064sf9s80xartrsvebbnard252jm5sfbpskt27maf0",
+        "finalized": false,
+        "ImplmentedInterfaces": [],
+        "StateVariables": [
+            {
+                "name": "balance",
+                "scope": "address",
+                "dataType": "uint32"
+            }
+        ],
+        "Scopes": {
+            "address": "HasState|HasFunction"
+        },
+        "ScatteredMaps": {},
+        "Structs": [],
+        "Enumerables": [],
+        "Interfaces": {},
+        "Functions": [
+            {
+                "name": "mint",
+                "flag": "InvokeByNormalTransaction",
+                "scope": "address",
+                "opcode": 0
+            }
+        ]
+    }
+]
