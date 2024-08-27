@@ -2,60 +2,31 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "compile",
-      "detail": "compile the contract",
-      "type": "shell",
-      "command": "${config:DEBUG_CHSIMU_PATH}",
-      "options": {
-        "cwd": "${workspaceFolder}/CPCF"
-      },
-      "args": ["${file}", "-count=4", "-WASM", "-stdout"]
-    },
-    {
-      "label": "copy cpp file",
-      "detail": "copy the cpp file to the contract folder",
-      "type": "shell",
-      "command": "copy D:/Users/IDEA/AppData/Roaming/.gcl/chsimu_repo/wasm/intermediate/1_0000001400100001_Token.cpp contract/token",
-      "args": []
-    },
-    {
       "label": "wasm to wat",
       "detail": "",
       "type": "shell",
       "command": "wasm2wat",
       "args": [
-        "D:/Users/IDEA/AppData/Roaming/.gcl/chsimu_repo/wasm/bin/1_0000001400100001_Token.wasm",
+        "${file}",
         "-o",
-        "contract/token/1_0000001400100001_Token.wat",
+        "contract/token/${fileBasename}.wat",
         "--generate-names",
         "--enable-function-references"
       ]
     },
-
     {
       "label": "traspiler",
       "detail": "traspiler",
       "type": "shell",
-      "command": "transpiler/transpiler.exe",
+      "command": "transpiler/transpiler",
       "args": [
         "--config",
         "transpiler/config.yaml",
         "--input",
-        "contract/1_0000001400100001_Token.wat",
+        "${file}",
         "--output",
-        "contract/tokenToken.wat",
-        "./build"
+        "contract/${fileBasename}.wat"
       ]
-    },
-    {
-      "label": "build wasmtime file",
-      "detail": "",
-      "type": "shell",
-      "command": "cmake",
-      "args": ["--build", "./build", "--target", "clean"],
-      "options": {
-        "cwd": "${workspaceFolder}/oxd_libsec"
-      }
     }
   ]
 }
