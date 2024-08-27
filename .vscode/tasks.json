@@ -5,11 +5,11 @@
       "label": "compile",
       "detail": "compile the contract",
       "type": "shell",
-      "command": "chsimu.exe",
+      "command": "${config:DEBUG_CHSIMU_PATH}",
       "options": {
         "cwd": "${workspaceFolder}/CPCF"
       },
-      "args": ["-count=4", "-WASM", "-stdout"]
+      "args": ["${file}", "-count=4", "-WASM", "-stdout"]
     },
     {
       "label": "copy cpp file",
