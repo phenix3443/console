@@ -6,14 +6,14 @@ struct __prlt_RelayToken {
     prlrt::__prlt___event __prli___event;
     prlrt::__prlt___debug __prli___debug;
     
-    __prlt_bigint __prli_balance;
+    __prlt_uint32 __prli_balance;
     
     __prlt_uint64 __prli___id() { return contract_id; }
     __prlt_bool __prli___valid()  { return prlrt::contract_has_template(contract_id, -1); }
     __prlt_address __prli___address() { __prlt_address ret; ret.SetAsContract(contract_id); return ret; }
     __prlt_token __prli___mint(__prlt_uint64 id, __prlt_bigint amount) { return prlrt::mint(id, amount); }
     __prlt_bool __prli___burn(__prlt_token burn_token) { return prlrt::burn(burn_token); }
-    __prlt_bool __prli_transfer(__prlt_address __prli_to, __prlt_bigint __prli_amount) { prlrt::burn_gas_function_call();
+    __prlt_bool __prli_transfer(__prlt_address __prli_to, __prlt_uint32 __prli_amount) { prlrt::burn_gas_function_call();
         if (__prli_balance >= __prli_amount) {
             __prli_balance -= __prli_amount;
             prlrt::relay(__prli_to, 3, 1, __prli_amount);
@@ -21,11 +21,11 @@ struct __prlt_RelayToken {
         }
         return __prlt_bool(false);
     }
-    void __prli_mint(__prlt_bigint __prli_value) { prlrt::burn_gas_function_call();
-        __prli___debug.__prli_assert(__prli_value >= __prlt_bigint("0", 1), 21);
+    void __prli_mint(__prlt_uint32 __prli_value) { prlrt::burn_gas_function_call();
+        __prli___debug.__prli_assert(__prlt_bigint(__prli_value) >= __prlt_bigint("0", 1), 21);
         __prli_balance += __prli_value;
     }
-    void __prli___relaylambda_1_transfer(__prlt_bigint __prli_amount) { prlrt::burn_gas_function_call();
+    void __prli___relaylambda_1_transfer(__prlt_uint32 __prli_amount) { prlrt::burn_gas_function_call();
         __prli_balance += __prli_amount;
     }
 };
@@ -39,7 +39,7 @@ extern "C" {
             {
                 __prlt_address arg0;
                 if (!arg0.map_from_serialized_data(args, args_size, true)) return uint32_t(prlrt::ExecutionError::ArgumentDeserializationFailure);
-                __prlt_bigint arg1;
+                __prlt_uint32 arg1;
                 if (!arg1.map_from_serialized_data(args, args_size, true)) return uint32_t(prlrt::ExecutionError::ArgumentDeserializationFailure);
                 if (args_size != 0) return uint32_t(prlrt::ExecutionError::ArgumentDeserializationFailure);
                 __prlt_bool ret = ((__prlt_RelayToken *)pContractInstance)->__prli_transfer(arg0, arg1);
@@ -48,7 +48,7 @@ extern "C" {
             }
             case 1:
             {
-                __prlt_bigint arg0;
+                __prlt_uint32 arg0;
                 if (!arg0.map_from_serialized_data(args, args_size, true)) return uint32_t(prlrt::ExecutionError::ArgumentDeserializationFailure);
                 if (args_size != 0) return uint32_t(prlrt::ExecutionError::ArgumentDeserializationFailure);
                 if (pContractInstance) ((__prlt_RelayToken *)pContractInstance)->__prli___relaylambda_1_transfer(arg0);

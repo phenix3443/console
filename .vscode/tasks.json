@@ -1,0 +1,33 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "wasm to wat",
+      "type": "shell",
+      "command": "${workspaceFolder}/wabt-1.0.35/bin/wasm2wat.exe",
+      "args": [
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}.wat",
+        "--generate-names",
+        "--enable-function-references"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "traspiler",
+      "detail": "traspiler",
+      "type": "shell",
+      "command": "${workspaceFolder}/transpiler/transpiler",
+      "args": [
+        "--config",
+        "transpiler/config.yaml",
+        "--input",
+        "${file}",
+        "--output",
+        "${fileDirname}/${fileBasenameNoExtension}.extend.wat"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}
