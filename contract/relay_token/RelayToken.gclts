@@ -7,15 +7,10 @@ chain.deploy @1 RelayToken.gcl
 log.highlight RelayToken test
 log Perparing test transactions
 
-state.set RelayToken.address @all { balance:"10000000000000" }
+state.set RelayToken.address @all { balance:100 }
 
-txn1[] = RelayToken.transfer*$~count$ @random { to:"$@random$", amount:"$random(1000, 2000)*100$" }
-
-chain.info
-
-stopwatch.restart
+RelayToken.transfer*$~count$ @random { to:"$@random$", amount:1 }
 chain.run
-stopwatch.report
 
 chain.info
 

@@ -22,12 +22,10 @@
   (import "env" "GCLEvent_Exception" (func $GCLEvent_Exception (type $t2)))
   (import "env" "GCLReleaseBigint" (func $GCLReleaseBigint (type $t12)))
   (import "env" "GCLCreateBigint" (func $GCLCreateBigint (type $t13)))
-  (import "env" "GCLBigintAssignInt64" (func $GCLBigintAssignInt64 (type $t14)))
   (import "env" "GCLTransaction_GetSuppliedTokensCount" (func $GCLTransaction_GetSuppliedTokensCount (type $t10)))
   (import "env" "GCLTransaction_GetSuppliedToken" (func $GCLTransaction_GetSuppliedToken (type $t16)))
   (import "env" "GCLReportReturnValue" (func $GCLReportReturnValue (type $t8)))
   (import "env" "GCLReportOrphanToken" (func $GCLReportOrphanToken (type $t14)))
-  (import "env" "GCLBigintCompare" (func $GCLBigintCompare (type $t17)))
   (import "env" "GCLBigintGetEmbeddedSize" (func $GCLBigintGetEmbeddedSize (type $t15)))
   (import "env" "GCLEmitRelayToScope" (func $GCLEmitRelayToScope (type $t18)))
   (import "wasi_snapshot_preview1" "proc_exit" (func $__wasi_proc_exit (type $t1)))
@@ -1091,7 +1089,7 @@
     i64.store
     local.get $l1
     i64.const 0
-    call $GCLBigintAssignInt64
+    bigint.assign
     local.get $p0)
   (func $Contract_chsimu_RelayToken_6_TransactionCallEntry (type $t11) (param $p0 i32) (param $p1 i32) (param $p2 i32) (param $p3 i32) (result i32)
     (local $l4 i32) (local $l5 i32) (local $l6 i32) (local $l7 i32) (local $l8 i32) (local $l9 i32) (local $l10 i32) (local $l11 i32) (local $l12 i32) (local $l13 i32) (local $l14 i32) (local $l15 i32)
@@ -2597,7 +2595,7 @@
         i64.load
         local.get $l1
         i64.load
-        call $GCLBigintCompare
+        bigint.eq
         i32.const 0
         i32.gt_s
         local.set $l2

@@ -1,7 +1,7 @@
 contract RelayToken {
-    @address bigint balance;
+    @address uint32 balance;
     
-    @address function bool transfer(address to, bigint amount) export
+    @address function bool transfer(address to, uint32 amount) export
     {
         if(balance >= amount)
         {
@@ -17,7 +17,7 @@ contract RelayToken {
         return false;
     }
 
-    @address function mint(bigint value) {
+    @address function mint(uint32 value) {
         __debug.assert(value >= 0ib);
         balance += value;
     }
