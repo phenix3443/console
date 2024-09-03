@@ -24,7 +24,13 @@
                 "name": "mint",
                 "flag": "InvokeByNormalTransaction",
                 "scope": "address",
-                "opcode": 0
+                "opcode": 0,
+                "params": [
+                    {
+                        "name": "value",
+                        "type": "uint32"
+                    }
+                ]
             }
         ]
     }
