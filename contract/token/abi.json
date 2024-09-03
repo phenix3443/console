@@ -1,7 +1,7 @@
 [
     {
         "contract": "Token",
-        "engine": "GCL_NATIVE",
+        "engine": "GCL_WASM",
         "hash": "11wcy6ce8q064sf9s80xartrsvebbnard252jm5sfbpskt27maf0",
         "finalized": false,
         "ImplmentedInterfaces": [],
