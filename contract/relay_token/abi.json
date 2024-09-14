@@ -1,0 +1,53 @@
+[
+    {
+        "contract": "RelayToken",
+        "engine": "GCL_NATIVE",
+        "hash": "qrpf2asp3ve0mctwg7tx924wmbbxe9jg8jth838ky4kxhydbgkrg",
+        "finalized": false,
+        "ImplmentedInterfaces": [],
+        "StateVariables": [
+            {
+                "name": "balance",
+                "scope": "address",
+                "dataType": "uint32"
+            }
+        ],
+        "Scopes": {
+            "address": "HasState|HasFunction"
+        },
+        "ScatteredMaps": {},
+        "Structs": [],
+        "Enumerables": [],
+        "Interfaces": {},
+        "Functions": [
+            {
+                "name": "transfer",
+                "flag": "InvokeByNormalTransaction|EmitRelayInAddressScope",
+                "scope": "address",
+                "opcode": 0,
+                "params": [
+                    {
+                        "name": "to",
+                        "type": "address"
+                    },
+                    {
+                        "name": "amount",
+                        "type": "uint32"
+                    }
+                ]
+            },
+            {
+                "name": "__relaylambda_1_transfer",
+                "flag": "InvokeByRelayTransaction",
+                "scope": "address",
+                "opcode": 1,
+                "params": [
+                    {
+                        "name": "amount",
+                        "type": "uint32"
+                    }
+                ]
+            }
+        ]
+    }
+]
